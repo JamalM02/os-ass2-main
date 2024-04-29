@@ -1,0 +1,3324 @@
+6627  execve("./uniform-length", ["./uniform-length", "tests/pride-sentences.txt", "tests/leaves-of-grass.txt", "tests/jekyll-hyde-sentences.txt"], 0x7ffe1854c350 /* 57 vars */) = 0
+6627  brk(NULL)                         = 0x5619446dd000
+6627  arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc813b2710) = -1 EINVAL (Invalid argument)
+6627  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f62bc51b000
+6627  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+6627  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+6627  newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=71927, ...}, AT_EMPTY_PATH) = 0
+6627  mmap(NULL, 71927, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f62bc509000
+6627  close(3)                          = 0
+6627  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+6627  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+6627  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+6627  pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+6627  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\302\211\332Pq\2439\235\350\223\322\257\201\326\243\f"..., 68, 896) = 68
+6627  newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+6627  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+6627  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f62bc2e0000
+6627  mprotect(0x7f62bc308000, 2023424, PROT_NONE) = 0
+6627  mmap(0x7f62bc308000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f62bc308000
+6627  mmap(0x7f62bc49d000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f62bc49d000
+6627  mmap(0x7f62bc4f6000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7f62bc4f6000
+6627  mmap(0x7f62bc4fc000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f62bc4fc000
+6627  close(3)                          = 0
+6627  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f62bc2dd000
+6627  arch_prctl(ARCH_SET_FS, 0x7f62bc2dd740) = 0
+6627  set_tid_address(0x7f62bc2dda10)   = 6627
+6627  set_robust_list(0x7f62bc2dda20, 24) = 0
+6627  rseq(0x7f62bc2de0e0, 0x20, 0, 0x53053053) = 0
+6627  mprotect(0x7f62bc4f6000, 16384, PROT_READ) = 0
+6627  mprotect(0x561943ed5000, 4096, PROT_READ) = 0
+6627  mprotect(0x7f62bc555000, 8192, PROT_READ) = 0
+6627  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+6627  munmap(0x7f62bc509000, 71927)     = 0
+6627  getrandom("\x34\x9c\x58\x6a\x2e\xf4\x9c\xa5", 8, GRND_NONBLOCK) = 8
+6627  brk(NULL)                         = 0x5619446dd000
+6627  brk(0x5619446fe000)               = 0x5619446fe000
+6627  openat(AT_FDCWD, "tests/pride-sentences.txt", O_RDONLY) = 3
+6627  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f62bc2dda10) = 6628
+6628  set_robust_list(0x7f62bc2dda20, 24 <unfinished ...>
+6627  openat(AT_FDCWD, "tests/leaves-of-grass.txt", O_RDONLY <unfinished ...>
+6628  <... set_robust_list resumed>)    = 0
+6628  newfstatat(3, "", {st_mode=S_IFREG|0777, st_size=688051, ...}, AT_EMPTY_PATH) = 0
+6628  read(3,  <unfinished ...>
+6627  <... openat resumed>)             = 4
+6628  <... read resumed>"Chapter 1\r\nIt is a truth univers"..., 1024) = 1024
+6627  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+6628  read(3,  <unfinished ...>
+6627  <... clone resumed>, child_tidptr=0x7f62bc2dda10) = 6629
+6629  set_robust_list(0x7f62bc2dda20, 24 <unfinished ...>
+6628  <... read resumed>" delighted with it, that he agre"..., 1024) = 1024
+6627  openat(AT_FDCWD, "tests/jekyll-hyde-sentences.txt", O_RDONLY <unfinished ...>
+6629  <... set_robust_list resumed>)    = 0
+6628  read(3,  <unfinished ...>
+6629  newfstatat(4, "",  <unfinished ...>
+6627  <... openat resumed>)             = 5
+6628  <... read resumed>"my share of beauty, but I do not"..., 1024) = 1024
+6627  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+6629  <... newfstatat resumed>{st_mode=S_IFREG|0777, st_size=780534, ...}, AT_EMPTY_PATH) = 0
+6628  read(3,  <unfinished ...>
+6627  <... clone resumed>, child_tidptr=0x7f62bc2dda10) = 6630
+6630  set_robust_list(0x7f62bc2dda20, 24 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6627  wait4(-1,  <unfinished ...>
+6630  <... set_robust_list resumed>)    = 0
+6628  <... read resumed>"s; and I am sure she is not half"..., 1024) = 1024
+6630  newfstatat(5, "",  <unfinished ...>
+6629  <... read resumed>"\357\273\277The Project Gutenberg eBook o"..., 1024) = 1024
+6630  <... newfstatat resumed>{st_mode=S_IFREG|0777, st_size=139778, ...}, AT_EMPTY_PATH) = 0
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"eserve, and caprice, that the ex"..., 1024) = 1024
+6630  <... read resumed>"THE STRANGE CASE OF DR. JEKYLL A"..., 1024) = 1024
+6629  <... read resumed>"Tallying Earth\342\200\231s soil, trees, "..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"to say quaintly: \"I let my broth"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"et him at the assemblies, and th"..., 1024) = 1024
+6630  <... read resumed>"d find in common.It was reported"..., 1024) = 1024
+6629  <... read resumed>"directing like flame its eyes,\r\n"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"ntrast to its dingy neighbourhoo"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"e Mr. Bingley to her.\"\r\n\"Impossi"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>" of faith, spreading white sails"..., 1024) = 1024
+6630  <... read resumed>" on the other side of the by-str"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"o was running as hard as she was"..., 1024) = 1024
+6628  <... read resumed>"n to Mr. Bingley.\"\r\n\"I am sick o"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"at sails, sail you!\r\n  Bear fort"..., 1024) = 1024
+6630  <... read resumed>"irst sight.\r\nSo had the child's "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"- but carrying it off, sir, real"..., 1024) = 1024
+6628  <... read resumed>"ls!\" said she, when the door was"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"self,)\r\n  Chanter of Personality"..., 1024) = 1024
+6630  <... read resumed>" a man does not, in real life, w"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"gh the nose for some of the cape"..., 1024) = 1024
+6628  <... read resumed>"he second-hand intelligence of t"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>", this book unwitting to itself,"..., 1024) = 1024
+6630  <... read resumed>"sir, I make it a rule of mine: t"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  newfstatat(1, "",  <unfinished ...>
+6630  <... read resumed>"id Mr. Enfield, \"I can't see wha"..., 1024) = 1024
+6628  <... read resumed>"rse.\r\nAn invitation to dinner wa"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... newfstatat resumed>{st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+6630  <... read resumed>" I know it already.\r\nYou see, Ri"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 203: "..., 71 <unfinished ...>
+6630  <... read resumed>"when he would go soberly and gra"..., 1024) = 1024
+6628  <... read resumed>"his five sisters and a cousin.\r\n"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... write resumed>)              = 71
+6630  <... read resumed>"his document had long been the l"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"n butler knew and welcomed him; "..., 1024) = 1024
+6628  <... read resumed>"ot all his large estate in Derby"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"ior\342\200\231s, martyr\342\200\231s, hero\342\200\231s to"..., 1024) = 1024
+6630  <... read resumed>"e little of him now.\"\r\n\r\n\"Indeed"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"me.\"\r\n That was the amount of in"..., 1024) = 1024
+6628  <... read resumed>" her daughters.\r\nElizabeth Benne"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"f orbic tendencies to shape and "..., 1024) = 1024
+6630  <... read resumed>"ch house, where his friend lay a"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 263: "..., 71 <unfinished ...>
+6630  <... read resumed>" he thought the mystery would li"..., 1024) = 1024
+6628  <... read resumed>"in the room,\" said Mr. Darcy, lo"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... write resumed>)              = 71
+6630  <... read resumed>"ken by any wind, drawing a regul"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>" street.\r\nThe lawyer, looking fo"..., 1024) = 1024
+6628  <... read resumed>"had seen her eldest daughter muc"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"s.\r\n\r\n       The prophet and the"..., 1024) = 1024
+6630  <... read resumed>" still without looking up,\r\n\"How"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 273: "..., 81 <unfinished ...>
+6630  <... read resumed>"\"\r\n\"Jekyll, for instance,\" said "..., 1024) = 1024
+6628  <... read resumed>"net,\" as she entered the room, \""..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... write resumed>)              = 81
+6630  <... read resumed>"d explain the hitherto unknown d"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"as now plunged in darkness excep"..., 1024) = 1024
+6628  <... read resumed>"y no more of his partners.\r\nOh t"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"biography famous,\r\n  And is this"..., 1024) = 1024
+6630  <... read resumed>"elight on the polished cabinets "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"ng while ago to be sure; but in "..., 1024) = 1024
+6628  <... read resumed>"ne and Elizabeth were alone, the"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"eople respond to them, yet know "..., 1024) = 1024
+6630  <... read resumed>"tinue as they are.\r\nIt turns me "..., 1024) = 1024
+6628  newfstatat(1, "",  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"o sit a while in his unobtrusive"..., 1024) = 1024
+6628  <... newfstatat resumed>{st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"We pass through Kanada, the Nort"..., 1024) = 1024
+6630  <... read resumed>"dant for all that; an ignorant, "..., 1024) = 1024
+6628  write(1, "tests/pride-sentences.txt: 206: "..., 58 <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 387: "..., 68 <unfinished ...>
+6630  <... read resumed>"t of this in confidence; and I m"..., 1024) = 1024
+6628  <... write resumed>)              = 58
+6629  <... write resumed>)              = 68
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"y great interest in poor Hyde.\r\n"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"\n\"Dear Lizzy!\"\r\n\"Oh!\r\nyou are a "..., 1024) = 1024
+6630  <... read resumed>"ut eleven.\r\nAlthough a fog rolle"..., 1024) = 1024
+6629  <... read resumed>"sive, receptive, silent as they,"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"nly inquiring his way; but the m"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"r.\"\r\n Elizabeth listened in sile"..., 1024) = 1024
+6630  <... read resumed>"under which the bones were audib"..., 1024) = 1024
+6629  <... read resumed>"ounded sea,\r\n  On its breast a s"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"nothing till I have seen the bod"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"ade.\r\nMr. Bingley inherited prop"..., 1024) = 1024
+6630  <... read resumed>"y wicked-looking, is what the ma"..., 1024) = 1024
+6629  <... read resumed>" what belongs to him or her and "..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"is mournful reinvasion of darkne"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"e situation and the principal ro"..., 1024) = 1024
+6630  <... read resumed>"smoothed by hypocrisy: but her m"..., 1024) = 1024
+6629  <... read resumed>" not link\342\200\231d with the rest nor "..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"of rooms; but these were furnish"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"ant people or prettier girls in "..., 1024) = 1024
+6630  <... read resumed>"r. Utterson: \"I have him in my h"..., 1024) = 1024
+6629  <... read resumed>"OK II\r\n\r\n\r\nStarting from Paumano"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"ooms.\r\nThe doctor had bought the"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>" where he had made a tolerable f"..., 1024) = 1024
+6630  <... read resumed>"ron.\r\nThe fire burned in the gra"..., 1024) = 1024
+6629  <... read resumed>",\r\n  Solitary, singing in the We"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"y; he did not like his friend's "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>" Miss Lucases and the Miss Benne"..., 1024) = 1024
+6630  <... read resumed>"ht hand and signed \"Edward Hyde\""..., 1024) = 1024
+6629  <... read resumed>"n playing its part and passing o"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"n. \"\r\nHe meant to murder you.\r\nY"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"\n\"Upon my word!\r\nWell, that is v"..., 1024) = 1024
+6630  <... read resumed>"ld be sucked down in the eddy of"..., 1024) = 1024
+6629  <... read resumed>"t return and study me.\r\n\r\n  In t"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"hillside vineyards, was ready to"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 620: "..., 65 <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"I do not believe a word of it, m"..., 1024) = 1024
+6630  <... read resumed>" Utterson. \"\r\nI have a document "..., 1024) = 1024
+6629  <... write resumed>)              = 65
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"erk, \"there's a rather singular "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"he solidity of her reflections, "..., 1024) = 1024
+6630  <... read resumed>"of his present whereabouts, not "..., 1024) = 1024
+6629  <... read resumed>" the soul.\r\n\r\n       6\r\n  The so"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"om one to the other as in the ol"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"sit.\r\n\r\nChapter 6\r\n The ladies o"..., 1024) = 1024
+6630  <... read resumed>"as unlikely that the doctor shou"..., 1024) = 1024
+6629  <... read resumed>"l.)\r\n\r\n  I will acknowledge cont"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>" he inquired. \r\n\"We are three ve"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"to be discovered by the world in"..., 1024) = 1024
+6630  <... read resumed>"e seclusion; you must not be sur"..., 1024) = 1024
+6629  <... read resumed>"s unrestricted faith.\r\n\r\n  Omnes"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"e was dead.\r\nThe night after the"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>" may never do more than like her"..., 1024) = 1024
+6630  <... read resumed>"e will, that idea had sprung fro"..., 1024) = 1024
+6629  <... read resumed>"heir religion,\r\n  Otherwise ther"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"e recluse.\r\nPoole had, indeed, n"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>" any husband, I dare say I shoul"..., 1024) = 1024
+6630  <... read resumed>"e, not to know that this was a b"..., 1024) = 1024
+6629  <... read resumed>"  It, magnificent, beyond materi"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"y cousin - Mr. Enfield - Dr. Jek"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"ood a chance of happiness as if "..., 1024) = 1024
+6630  <... read resumed>"il they had come into a neighbou"..., 1024) = 1024
+6629  <... read resumed>"ting themes.\r\n\r\n  O such themes-"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>" die if I like it.\r\nMr. Utterson"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  newfstatat(1, "",  <unfinished ...>
+6628  <... read resumed>"ar to himself and his friends th"..., 1024) = 1024
+6630  <... newfstatat resumed>{st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+6629  <... read resumed>"s,\r\n  For those who belong here "..., 1024) = 1024
+6630  write(1, "tests/jekyll-hyde-sentences.txt:"..., 62 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... write resumed>)              = 62
+6629  read(4,  <unfinished ...>
+6630  write(1, "tests/jekyll-hyde-sentences.txt:"..., 66 <unfinished ...>
+6628  <... read resumed>" Forster?\"\r\n\"That is a question "..., 1024) = 1024
+6630  <... write resumed>)              = 66
+6629  <... read resumed>"d to\r\n      beautiful results,\r\n"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>" me and see for yourself?\"\r\n Mr."..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"anity had taken a musical turn, "..., 1024) = 1024
+6630  <... read resumed>"emselves along the railing.\r\nPoo"..., 1024) = 1024
+6629  <... read resumed>"\n\r\n  Of your real body and any m"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"ook, crying out \"Bless God!\r\nit'"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 839: "..., 57 <unfinished ...>
+6630  write(1, "tests/jekyll-hyde-sentences.txt:"..., 63 <unfinished ...>
+6628  <... read resumed>" higher degree of excellence tha"..., 1024) = 1024
+6630  <... write resumed>)              = 63
+6629  <... write resumed>)              = 57
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"o.\r\n\" Mr. Utterson's nerves, at "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"friend performs delightfully,\" h"..., 1024) = 1024
+6630  <... read resumed>"looking Mr. Utterson in the eyes"..., 1024) = 1024
+6629  <... read resumed>" Interlink\342\200\231d, food-yielding la"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"me sort of medicine and cannot g"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"is young lady to you as a very d"..., 1024) = 1024
+6630  <... read resumed>" for his present purpose.\r\nIn th"..., 1024) = 1024
+6629  <... read resumed>"r breath\342\200\231d land! Arctic braced"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"\"\r\nIt was this way.\r\nI came sudd"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"we cannot wonder at his complais"..., 1024) = 1024
+6630  <... read resumed>" poor soul retains some hope of "..., 1024) = 1024
+6629  <... read resumed>"spinal river, yet in my house of"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"ur master's feelings, much asI a"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"eplied with great intrepidity:\r\n"..., 1024) = 1024
+6630  <... read resumed>"l, sir, it went so quick, and th"..., 1024) = 1024
+6629  <... read resumed>"estled with as I pass for the so"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>" like ice.\r\nO, I know it's not e"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 921: "..., 68 <unfinished ...>
+6630  read(5,  <unfinished ...>
+6628  <... read resumed>"though ample for her situation i"..., 1024) = 1024
+6630  <... read resumed>"s and take your post at the labo"..., 1024) = 1024
+6629  <... write resumed>)              = 68
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>" put your heart in your ears, Mr"..., 1024) = 1024
+6628  <... read resumed>"ell supplied both with news and "..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"ar, with new contests,\r\n  New po"..., 1024) = 1024
+6630  <... read resumed>" our suspicions are aroused, and"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"le singing its thin strain, a dr"..., 1024) = 1024
+6628  <... read resumed>"as disconcerted, and made no ans"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"e many-cylinder\342\200\231d steam printi"..., 1024) = 1024
+6630  <... read resumed>"illed almost the whole ground st"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 958: "..., 67 <unfinished ...>
+6630  <... read resumed>"son, and he turned to examine th"..., 1024) = 1024
+6628  <... read resumed>" coat myself very well - and, in"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... write resumed>)              = 67
+6630  <... read resumed>"fireside, where the easy-chair w"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"ould Jekyll want with it?\"\r\nhe s"..., 1024) = 1024
+6628  <... read resumed>"h Louisa and me, we shall be in "..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"asure--O one more desirer and lo"..., 1024) = 1024
+6630  <... read resumed>"the top.\r\n\"O Poole!\"\r\nthe lawyer"..., 1024) = 1024
+6628  write(1, "tests/pride-sentences.txt: 458: "..., 57 <unfinished ...>
+6630  write(1, "tests/jekyll-hyde-sentences.txt:"..., 59 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... write resumed>)              = 59
+6628  <... write resumed>)              = 57
+6630  write(1, "tests/jekyll-hyde-sentences.txt:"..., 65 <unfinished ...>
+6629  <... read resumed>" distillation would intoxicate m"..., 1024) = 1024
+6630  <... write resumed>)              = 65
+6628  write(1, "tests/pride-sentences.txt: 462: "..., 55 <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"Y JEKYLL.\"\r\n\"There was a third e"..., 1024) = 1024
+6628  <... write resumed>)              = 55
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"ealth, the full-noon trill, the "..., 1024) = 1024
+6630  <... read resumed>"indeed, the night before; and I "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ftener than I can get them.\"\r\n\"B"..., 1024) = 1024
+6629  <... read resumed>"any more perfection than there i"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" yesterday.\r\nMy kind friends wil"..., 1024) = 1024
+6629  <... read resumed>"ery organ and attribute of me, a"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" a thing, in all this dirt!\r\nYou"..., 1024) = 1024
+6629  <... read resumed>"ndifference of some man or woman"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" and springing over puddles with"..., 1024) = 1024
+6629  <... read resumed>"roat,\r\n  Not words, not music or"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ere not very favourably answered"..., 1024) = 1024
+6629  <... read resumed>"er, mullein and\r\n      poke-weed"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 1141:"..., 64 <unfinished ...>
+6628  <... read resumed>"owed readily, for the feverish s"..., 1024) = 1024
+6630  <... read resumed>"tation, to drive straight to my "..., 1024) = 1024
+6629  <... write resumed>)              = 64
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"could not make a very favourable"..., 1024) = 1024
+6629  <... read resumed>"m I would have loved them,\r\n  It"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ay to her.\r\nWhen dinner was over"..., 1024) = 1024
+6629  <... read resumed>"onward and outward, nothing coll"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"the room this morning.\r\nHer dirt"..., 1024) = 1024
+6629  <... read resumed>"that have shed tears,\r\n  For me "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"your servants are in bed is to b"..., 1024) = 1024
+6628  <... read resumed>"nd mother, and such low connecti"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>" mobs,\r\n  The flap of the curtai"..., 1024) = 1024
+6630  <... read resumed>"s will roll away like a story th"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"e butler was awaiting my arrival"..., 1024) = 1024
+6628  <... read resumed>"n pleasant that she should go do"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"w.\r\n\r\n  I am there, I help, I ca"..., 1024) = 1024
+6630  <... read resumed>"rs I found what seemed to me a s"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"actical usefulness.\r\nHow could t"..., 1024) = 1024
+6628  <... read resumed>"collection were larger for your "..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"\n  Her father and his friends sa"..., 1024) = 1024
+6630  <... read resumed>" sight, I thought my visitor sta"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"hus, from the first moment of hi"..., 1024) = 1024
+6628  <... read resumed>"heart; I will buy Pemberley itse"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>" his neck and ankles;\r\n  He stai"..., 1024) = 1024
+6630  <... read resumed>"n, were yet the work of a few se"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"t, and I could see, in spite of "..., 1024) = 1024
+6628  <... read resumed>" what do you mean?\"\r\n\"Yes, all o"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"om their temples and ribs.\r\n\r\n  "..., 1024) = 1024
+6630  <... read resumed>" me with a smiling nod, measured"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"dered to a man in mortal distres"..., 1024) = 1024
+6628  <... read resumed>" must have a thorough knowledge "..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"the long dray of the stone-yard,"..., 1024) = 1024
+6630  <... read resumed>"ble and held on, staring with in"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"l die incredulous.\r\nAs for the m"..., 1024) = 1024
+6628  <... read resumed>"ntion to what was going forward."..., 1024) = 1024
+6630  write(1, "tests/jekyll-hyde-sentences.txt:"..., 65 <unfinished ...>
+6629  <... read resumed>"slowly circle around.\r\n\r\n  I bel"..., 1024) = 1024
+6630  <... write resumed>)              = 65
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>" wear a more than commonly grave"..., 1024) = 1024
+6628  <... read resumed>"she would not hear of; but she w"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"  They scorn the best I can do t"..., 1024) = 1024
+6630  <... read resumed>" of me were in dead earnest;I wa"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"direction and in one direction o"..., 1024) = 1024
+6628  <... read resumed>"y dispatched, and its contents a"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"s stretches,\r\n  The deacons are "..., 1024) = 1024
+6630  <... read resumed>"ankind that these incongruous fa"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>" evident, my discoveries were in"..., 1024) = 1024
+6628  <... read resumed>" longer on your kindness.\"\r\n\"Rem"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"ace,\r\n  The western turkey-shoot"..., 1024) = 1024
+6630  <... read resumed>"ular salt which I knew, from my "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"riginal evil; and the thought, i"..., 1024) = 1024
+6628  <... read resumed>"I should resolve to quit Netherf"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"s now and then for the knots,\r\n "..., 1024) = 1024
+6630  <... read resumed>"rd Hyde.\r\nI must here speak by t"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"e spirit, it seemed more express"..., 1024) = 1024
+6628  <... read resumed>" move in a very confined and unv"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>" reclines with rigid head and ju"..., 1024) = 1024
+6630  <... read resumed>"le spirit, had I risked the expe"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>" (to say the least) undignified,"..., 1024) = 1024
+6628  <... read resumed>"ing at all.\"\r\n\"Indeed, Mamma, yo"..., 1024) = 1024
+6629  <... read resumed>"nd small arms!)\r\n  Seasons pursu"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6630  <... read resumed>"he person of Dr. Jekyll,I could "..., 1024) = 1024
+6628  <... read resumed>"is my idea of good breeding; and"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"e Henry Jekyll.\r\nThe pleasures w"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"me, and I tend outward to them,\r"..., 1024) = 1024
+6630  <... read resumed>"s his conscience slumbered.\r\nInt"..., 1024) = 1024
+6628  <... read resumed>"ith her that my sister-in-law wa"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"months before the murder of Sir "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"land,\r\n  At home in the fleet of"..., 1024) = 1024
+6630  <... read resumed>"learly enough, in the yellow lig"..., 1024) = 1024
+6628  <... read resumed>"also with Lizzy.\r\nMr. Bingley wa"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 1518:"..., 64 <unfinished ...>
+6630  <... read resumed>"r my face; but of what use was t"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... write resumed>)              = 64
+6630  <... read resumed>"me of late as though the body of"..., 1024) = 1024
+6628  <... read resumed>"dress Mr. Bingley on the subject"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"old of my original and better se"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>" 17\r\n  These are really the thou"..., 1024) = 1024
+6630  <... read resumed>"r smartingly in the fires of abs"..., 1024) = 1024
+6628  <... read resumed>"n to join in their censure of he"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"ained to, and enjoyed the compen"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"a!\r\n  And to all generals that l"..., 1024) = 1024
+6630  <... read resumed>"d in my soul that tempest of imp"..., 1024) = 1024
+6628  <... read resumed>"pinion of each.\"How delighted Mi"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"y love of life screwed to the to"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"ht astonish? does the early reds"..., 1024) = 1024
+6630  <... read resumed>"th tears and prayers to smother "..., 1024) = 1024
+6628  <... read resumed>" is of no consequence.\r\nI shall "..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"errors of the scaffold.\r\nJekyll "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>" not one a barley-corn less,\r\n  "..., 1024) = 1024
+6630  <... read resumed>"ner that I at last fell before t"..., 1024) = 1024
+6628  <... read resumed>"mes an indirect boast.\"\r\n\"And wh"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"t me faint; and then as in its t"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"fulness I can wait.\r\n\r\n  My foot"..., 1024) = 1024
+6630  <... read resumed>"elf to solve.\r\nThe laboratory do"..., 1024) = 1024
+6628  <... read resumed>"f to be true, and I believe it a"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"h fury; and the smile withered f"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"tic nourishing night!\r\n  Night o"..., 1024) = 1024
+6630  <... read resumed>" was fully come, he set forth in"..., 1024) = 1024
+6628  <... read resumed>"to give a flat denial, and ride "..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>" me.\r\nIt was no longer the fear "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"undress, hurry me out of sight o"..., 1024) = 1024
+6630  <... read resumed>"ing and freezing with the passio"..., 1024) = 1024
+6628  <... read resumed>"nts to reason one into it.\r\nI am"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"without transition (for the pang"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"id you fear some scrofula out of"..., 1024) = 1024
+6630  <... read resumed>"that that insurgent horror was k"..., 1024) = 1024
+6628  <... read resumed>"uld not pay him half so much def"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"e thought of him, when I recall "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"ive science! long live exact dem"..., 1024) = 1024
+6630  <... read resumed>" it was that unknown impurity wh"..., 1024) = 1024
+6628  <... read resumed>"ence of some music.\r\nMiss Bingle"..., 1024) = 1024
+6630  read(5,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... read resumed>"y chair, or continue, with the m"..., 1024) = 514
+6628  read(3,  <unfinished ...>
+6630  read(5,  <unfinished ...>
+6629  <... read resumed>"om them,\r\n  No more modest than "..., 1024) = 1024
+6630  <... read resumed>"", 1024)       = 0
+6628  <... read resumed>" near Elizabeth, said to her:\r\n\""..., 1024) = 1024
+6630  close(5 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6630  <... close resumed>)              = 0
+6628  read(3,  <unfinished ...>
+6630  exit_group(6 <unfinished ...>
+6629  <... read resumed>"lusts, voices veil\342\200\231d and I rem"..., 1024) = 1024
+6630  <... exit_group resumed>)         = ?
+6628  <... read resumed>"s, he should be in some danger.\r"..., 1024) = 1024
+6630  +++ exited with 6 +++
+6629  read(4,  <unfinished ...>
+6627  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 6}], 0, NULL) = 6630
+6628  read(3,  <unfinished ...>
+6627  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=6630, si_uid=1000, si_status=6, si_utime=0, si_stime=0} ---
+6629  <... read resumed>"sts it shall be you!\r\n  My brain"..., 1024) = 1024
+6627  wait4(-1,  <unfinished ...>
+6628  <... read resumed>"\nThey are in the same profession"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"\r\n\r\n  That I walk up my stoop, I"..., 1024) = 1024
+6628  <... read resumed>"ou are charmingly grouped, and a"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 1841:"..., 68 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 68
+6628  <... read resumed>"g to say to him before he had ad"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" With the twirl of my tongue I e"..., 1024) = 1024
+6628  <... read resumed>"retch himself on one of the sofa"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" hush of my lips I wholly confou"..., 1024) = 1024
+6628  <... read resumed>"n, threw aside her book, and cas"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"s,\r\n  The steam-whistle, the sol"..., 1024) = 1024
+6628  <... read resumed>"ar Caroline, I dare say, but it "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"in fakes of death,\r\n  At length "..., 1024) = 1024
+6628  <... read resumed>"ves his joining them would inter"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"aking no denial,\r\n  Depriving me"..., 1024) = 1024
+6628  <... read resumed>"unish him for such a speech?\"\r\n\""..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"estling touch, sheath\342\200\231d hooded"..., 1024) = 1024
+6628  <... read resumed>"here are such people, but I hope"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" other,\r\n  And they are to branc"..., 1024) = 1024
+6628  <... read resumed>"le yielding - certainly too litt"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 1994:"..., 68 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 68
+6628  <... read resumed>"Darcy, after a few moments' reco"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" my approach,\r\n  In vain the mas"..., 1024) = 1024
+6628  <... read resumed>"considered as intruding themselv"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 2033:"..., 66 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 66
+6628  <... read resumed>"than usual to himself.\r\nHe wisel"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"go,\r\n  Not one is respectable or"..., 1024) = 1024
+6628  <... read resumed>"veliest of spirits.\r\nThey were n"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"u a minute, then I resign you, s"..., 1024) = 1024
+6628  <... read resumed>"\r\nChapter 13\r\n\"I hope, my dear,\""..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ere the\r\n      buck turns furiou"..., 1024) = 1024
+6628  <... read resumed>"daughters at once.\r\nAfter amusin"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"histling betwixt the woods and t"..., 1024) = 1024
+6628  <... read resumed>"cared anything about.\"It certain"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" a black chip out of the water,\r"..., 1024) = 1024
+6628  <... read resumed>"pleased him to be at variance.\r\n"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"are\r\n      scatter\342\200\231d, where th"..., 1024) = 1024
+6628  <... read resumed>"t being the means of injuring yo"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 1013:"..., 63 <unfinished ...>
+6629  <... read resumed>"and feeds upon small crabs,\r\n  W"..., 1024) = 1024
+6628  <... write resumed>)              = 63
+6629  write(1, "tests/leaves-of-grass.txt: 2161:"..., 68 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 68
+6628  <... read resumed>" if Lady Catherine should be so "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"rn\342\200\231d up to the clouds,\r\n      "..., 1024) = 1024
+6628  <... read resumed>"tient to see him.\"\r\n\"In point of"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"il\342\200\231d meteors, throwing fire-ba"..., 1024) = 1024
+6628  <... read resumed>"ry formal.\r\nHe had not been long"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"phere I stretch around on the wo"..., 1024) = 1024
+6628  <... read resumed>"utious of appearing forward and "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"d and rudderless wreck of the\r\n "..., 1024) = 1024
+6628  <... read resumed>"nued to apologise for about a qu"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" sting like needles his legs and"..., 1024) = 1024
+6628  <... read resumed>"e Saturday before, to make up he"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"e night air in my red shirt, the"..., 1024) = 1024
+6628  <... read resumed>"ne from Rosings Park, her ladysh"..., 1024) = 1024
+6629  read(4, "l, he furiously waves\r\n      wit"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" among the ladies at court.\"\r\n\"H"..., 1024) = 1024
+6629  <... read resumed>"costume of hunters,\r\n  Not a sin"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ing at the time, and though I so"..., 1024) = 1024
+6629  <... read resumed>"you learn who won by the light o"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"on he chose Fordyce's Sermons.\r\n"..., 1024) = 1024
+6629  <... read resumed>"any strange faces they do not kn"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"their own trifling amusements.\r\n"..., 1024) = 1024
+6629  <... read resumed>"nterns.\r\n\r\n  Toward twelve there"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"nexpected prosperity.\r\nA fortuna"..., 1024) = 1024
+6629  <... read resumed>"fs of sea-breeze, smells of sedg"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"d all his strictest notions of w"..., 1024) = 1024
+6629  <... read resumed>"a cholera patient lies at the la"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 2446:"..., 71 <unfinished ...>
+6628  <... read resumed>"usted that she might soon have t"..., 1024) = 1024
+6629  <... write resumed>)              = 71
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"llins, being in fact much better"..., 1024) = 1024
+6629  <... read resumed>" we go, and pass all boundary li"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" an opposite shop, and fortunate"..., 1024) = 1024
+6629  <... read resumed>"ly out of\r\n      the glance of h"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"e usual civilities.\r\nBingley was"..., 1024) = 1024
+6629  <... read resumed>"cheek I put the family kiss,\r\n  "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ties that they should come in, a"..., 1024) = 1024
+6629  <... read resumed>"\n  And for strong upright men I "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"by such an excess of good breedi"..., 1024) = 1024
+6629  <... read resumed>"re in a framer framing a house,\r"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"supper afterwards.\r\nThe prospect"..., 1024) = 1024
+6629  <... read resumed>"n the amplest strewing the squar"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"\n\r\nChapter 16\r\n As no objection "..., 1024) = 1024
+6629  <... read resumed>"\r\n  Ever the hard unsunk ground,"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ey-piece alone had cost eight hu"..., 1024) = 1024
+6629  <... read resumed>" and councils, banks, tariffs, s"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"smallest degree of unreasonable "..., 1024) = 1024
+6629  <... read resumed>"ngineers?\r\n  In the houses the d"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"tchfulness, most abundantly supp"..., 1024) = 1024
+6629  <... read resumed>"he skull-cap, to Shastas and Ved"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"of his acquaintance with Mr. Dar"..., 1024) = 1024
+6629  <... read resumed>"ts of blood!\r\n\r\n  Be at peace bl"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" to be,\" cried Elizabeth very wa"..., 1024) = 1024
+6629  <... read resumed>"rely floating with open mouths f"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"or frightened by his high and im"..., 1024) = 1024
+6629  <... read resumed>"account with lamentation,\r\n  (Wh"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"s Mr. Darcy without being grieve"..., 1024) = 1024
+6629  <... read resumed>"g could overlay it.\r\n\r\n  For it "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 2764:"..., 62 <unfinished ...>
+6628  <... read resumed>"ave been a disappointed man, and"..., 1024) = 1024
+6629  <... write resumed>)              = 62
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"y chose to doubt it - or to trea"..., 1024) = 1024
+6629  <... read resumed>"y condition promulges not only i"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" him to behave so cruelly?\"\r\n\"A "..., 1024) = 1024
+6629  <... read resumed>"azard the span or make it impati"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" just to him.\"\r\n Elizabeth was a"..., 1024) = 1024
+6629  <... read resumed>"u,\r\n  You must travel it for you"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"o my father's active superintend"..., 1024) = 1024
+6629  <... read resumed>"are biscuits to eat and here is "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ily pride, and filial pride - fo"..., 1024) = 1024
+6629  <... read resumed>"or a slight cutting him worse th"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"pauses and many trials of other "..., 1024) = 1024
+6629  <... read resumed>"on, and a drop or motion of wave"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 2909:"..., 64 <unfinished ...>
+6628  <... read resumed>"n between his cousin Elizabeth a"..., 1024) = 1024
+6629  <... write resumed>)              = 64
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ied, \"has very lately given him "..., 1024) = 1024
+6629  <... read resumed>"what I have told them.\r\n\r\n      "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 2941:"..., 65 <unfinished ...>
+6628  <... read resumed>"his patroness, she is an arrogan"..., 1024) = 1024
+6629  <... write resumed>)              = 65
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"t away with her head full of him"..., 1024) = 1024
+6629  <... read resumed>"understand God not in the least,"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ssibility of his having endured "..., 1024) = 1024
+6629  <... read resumed>"o the leafy lips, I reach to the"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"r's favourite in such a manner, "..., 1024) = 1024
+6629  <... read resumed>"now it--it is without name--it i"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ngley and his sisters came to gi"..., 1024) = 1024
+6629  <... read resumed>"o wishes to walk with me?\r\n\r\n  W"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" friends, and the attentions of "..., 1024) = 1024
+6629  <... read resumed>"DREN OF ADAM\r\n\r\n\r\nTo the Garden "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ended to accept Mr. Bingley's in"..., 1024) = 1024
+6629  <... read resumed>"e,\r\n  Singing the muscular urge "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"tead!\r\nher liveliness had never "..., 1024) = 1024
+6629  <... read resumed>"\r\n  The female form approaching,"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"be the consequence of any reply."..., 1024) = 1024
+6629  <... read resumed>"d the vessel to,\r\n  The general "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" certainty of meeting him had no"..., 1024) = 1024
+6629  <... read resumed>" a moment O tender waiter, and I"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" was not less answerable for Wic"..., 1024) = 1024
+6629  <... read resumed>" a well-made man appears not onl"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"e dances of mortification.\r\nMr. "..., 1024) = 1024
+6629  <... read resumed>"p of laborers seated at noon-tim"..., 1024) = 1024
+6628  write(1, "tests/pride-sentences.txt: 1369:"..., 61 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... write resumed>)              = 61
+6629  <... read resumed>"st with the little child,\r\n  Swi"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"en the dancing recommenced, howe"..., 1024) = 1024
+6629  <... read resumed>"    had a fine one presented to "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ome sort of remark on the size o"..., 1024) = 1024
+6629  <... read resumed>"ll.\r\n\r\n       5\r\n  This is the f"..., 1024) = 1024
+6628  write(1, "tests/pride-sentences.txt: 1380:"..., 57 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... write resumed>)              = 57
+6629  <... read resumed>"us--after the child is born of w"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 3273:"..., 67 <unfinished ...>
+6628  <... read resumed>"e \351clat of a proverb.\"\r\n\"This is"..., 1024) = 1024
+6629  <... write resumed>)              = 67
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"eplied Elizabeth with emphasis, "..., 1024) = 1024
+6629  <... read resumed>"l,\r\n  The wildest largest passio"..., 1024) = 1024
+6628  read(3, "lso upbraiding me.\"\r\n The latter"..., 1024) = 1024
+6628  read(3, "\n\"The present always occupies yo"..., 1024) = 1024
+6629  read(4, "t, and he or she has\r\n      no r"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4, "ot flabby,\r\n      good-sized arm"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"he gravely, \"that reports may va"..., 1024) = 1024
+6629  <... read resumed>"dy of a woman?\r\n  Have you ever "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"other communication, that he was"..., 1024) = 1024
+6629  <... read resumed>"s, young man\342\200\231s, young woman\342\200\231"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"count to be the same,\" said Eliz"..., 1024) = 1024
+6629  <... read resumed>"l, toes, toe-joints, the heel;\r\n"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" want to know,\" said she, with a"..., 1024) = 1024
+6629  <... read resumed>"out,\r\n  The beauty of the waist,"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" from Mr. Darcy.\r\nI am satisfied"..., 1024) = 1024
+6629  <... read resumed>" and avows the deliciousness of "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 3443:"..., 64 <unfinished ...>
+6628  <... read resumed>"r the pleasantness of her last p"..., 1024) = 1024
+6629  <... write resumed>)              = 64
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"er.\r\nI believe him to be Lady Ca"..., 1024) = 1024
+6629  <... read resumed>"nd bards,\r\n  They refuse to awak"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"e clerical office as equal in po"..., 1024) = 1024
+6629  <... read resumed>"of them, as I\r\n      count on th"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" Darcy was eyeing him with unres"..., 1024) = 1024
+6629  <... read resumed>" on purpose, wherever are men li"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"er observations gave birth to, m"..., 1024) = 1024
+6629  <... read resumed>", mint, birch-bark,\r\n  The boy\342\200"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"s such a comfort to think how fo"..., 1024) = 1024
+6629  <... read resumed>" to\r\n      repress what would ma"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ble vexation, she could perceive"..., 1024) = 1024
+6629  <... read resumed>" am through,\r\n  The wholesome re"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"th, however, Mrs. Bennet had no "..., 1024) = 1024
+6629  <... read resumed>"s ties and conventions, I from m"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"te began another.\r\nMary's powers"..., 1024) = 1024
+6629  <... read resumed>"ht afterward lose you.\r\n\r\n  Now "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" with an air; for I consider mus"..., 1024) = 1024
+6629  <... read resumed>" We two, how long we were fool\342\200"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"to Mr. Darcy, he concluded his s"..., 1024) = 1024
+6629  <... read resumed>"atmosphere is, transparent, rece"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"he ladies, were more intolerable"..., 1024) = 1024
+6629  <... read resumed>"\n  I am for those who believe in"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"the probable consequence of her "..., 1024) = 1024
+6629  <... read resumed>"that woman who passionately clun"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"lked only to each other.\r\nElizab"..., 1024) = 1024
+6629  <... read resumed>"d of migrations, look afar,\r\n  L"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ld in the course of three or fou"..., 1024) = 1024
+6629  <... read resumed>"ts, conformities,\r\n  Which too l"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"e honour of a private audience w"..., 1024) = 1024
+6629  <... read resumed>"ody-leaves growing up above me a"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"oyment the feelings which were d"..., 1024) = 1024
+6629  <... read resumed>"m then indifferent, my soul decl"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ng run away with by his feelings"..., 1024) = 1024
+6629  <... read resumed>"one therefore O death, that I ma"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ort of person, not brought up hi"..., 1024) = 1024
+6629  <... read resumed>"posed, but far different.\r\n\r\n  W"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" his daughters, that the loss to"..., 1024) = 1024
+6629  <... read resumed>"e beach of the sea or\r\n      som"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"time.\r\nAccept my thanks for the "..., 1024) = 1024
+6629  <... read resumed>"  Nor will the candidates for my"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ou so.\r\nNay, were your friend La"..., 1024) = 1024
+6629  <... read resumed>"\n\r\n\r\n\r\nThese I Singing in Spring"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"spoke, she would have quitted th"..., 1024) = 1024
+6629  <... read resumed>"dispensing, singing, there I wan"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" establishment I can offer would"..., 1024) = 1024
+6629  <... read resumed>"water by the pond-side, that I r"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"is absolutely impossible.\r\nMy fe"..., 1024) = 1024
+6629  <... read resumed>"ses of my body that take you and"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"the end of the conference, no so"..., 1024) = 1024
+6629  <... read resumed>" view, and might prove (as of co"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 4022:"..., 76 <unfinished ...>
+6628  <... read resumed>"irl, and does not know her own i"..., 1024) = 1024
+6629  <... write resumed>)              = 76
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"marry Mr. Collins, for she vows "..., 1024) = 1024
+6629  <... read resumed>"ew and antique, the Greek and Ge"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"Elizabeth replied that it was. \""..., 1024) = 1024
+6629  <... read resumed>"ureless ocean of love\r\n      wit"..., 1024) = 1024
+6628  write(1, "tests/pride-sentences.txt: 1669:"..., 57 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... write resumed>)              = 57
+6629  <... read resumed>"perfect health,\r\n      refresh\342\200"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"as soon as may be.\"\r\n Not yet, h"..., 1024) = 1024
+6629  <... read resumed>"ly around my breast--and that ni"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" you are come, for there is such"..., 1024) = 1024
+6629  <... read resumed>" Breezes of land and love set fr"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"arriage in this way, you will ne"..., 1024) = 1024
+6629  <... read resumed>"urry, seeking something, and nev"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>", I do insist upon it, that you,"..., 1024) = 1024
+6629  <... read resumed>" I have lived and sung in your m"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ess had my fair cousin honoured "..., 1024) = 1024
+6629  <... read resumed>"ican comrades land and sea,\r\n  W"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" feelings necessarily attending "..., 1024) = 1024
+6629  <... read resumed>"life without a friend a lover ne"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"hem on their entering the town, "..., 1024) = 1024
+6629  <... read resumed>"e other men in other lands yearn"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ed to Miss Bennet; it came from "..., 1024) = 1024
+6629  <... read resumed>"viding\r\n\r\n  The prairie-grass di"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"r having just resolved to follow"..., 1024) = 1024
+6629  <... read resumed>"ogether through life, through da"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" friends before they leave the c"..., 1024) = 1024
+6629  <... read resumed>" while longer, soon I travel tow"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ut of that I despair.\r\nI sincere"..., 1024) = 1024
+6629  <... read resumed>"he stove\r\n      late of a winter"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ntioned to you my feelings on th"..., 1024) = 1024
+6629  <... read resumed>" an athlete is enamour\342\200\231d of me"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" there be any other opinion on t"..., 1024) = 1024
+6629  <... read resumed>" of the crowd, parting the parti"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" of the way.\r\nBut, my dearest Ja"..., 1024) = 1024
+6629  <... read resumed>"Western Boy\r\n\r\n  Many things to "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"de for yourself,\" said Elizabeth"..., 1024) = 1024
+6629  <... read resumed>",\r\n  And I when I meet you mean "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 4524:"..., 75 <unfinished ...>
+6628  <... read resumed>"oon the pleasure of seeing its h"..., 1024) = 1024
+6629  <... write resumed>)              = 75
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"as so kind as to listen to Mr. C"..., 1024) = 1024
+6629  <... read resumed>"t is you, compact, visible, real"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"viction that if they saw him dep"..., 1024) = 1024
+6629  <... read resumed>"tude lengthens,\r\n  Asia, Africa,"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"d by nature must guard his court"..., 1024) = 1024
+6629  <... read resumed>"usical recitative of old poems,\r"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" formed hopes of coming out a ye"..., 1024) = 1024
+6629  <... read resumed>"he Christ,\r\n  I hear the Hindoo "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"nd that of any other person.\r\nEl"..., 1024) = 1024
+6629  <... read resumed>"lps,\r\n  I see the Pyrenees, Balk"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"s might allow him to visit them."..., 1024) = 1024
+6629  <... read resumed>"behold the sail and steamships o"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"y excited by such affectionate a"..., 1024) = 1024
+6629  <... read resumed>"isbon, Naples,\r\n  Hamburg, Breme"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"was done away.\r\nMiss Lucas calle"..., 1024) = 1024
+6629  <... read resumed>"ing of the Ganges over the high "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 4699:"..., 64 <unfinished ...>
+6628  <... read resumed>"Elizabeth had now recollected he"..., 1024) = 1024
+6629  <... write resumed>)              = 64
+6629  read(4, " have lived banish\342\200\231d from my t"..., 1024) = 1024
+6629  read(4, ",\r\n  I see the nomadic tribes wi"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"the cliffs, glaciers, torrents, "..., 1024) = 1024
+6628  <... read resumed>" the idea of so unsuitable a mat"..., 1024) = 1024
+6629  read(4, "tta, Tokio,\r\n  I see the Kruman "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"-makers of the earth,\r\n  The hel"..., 1024) = 1024
+6628  <... read resumed>"n the houses, he unfolded the ma"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 1876:"..., 57 <unfinished ...>
+6629  <... read resumed>"  You neighbor of the Danube!\r\n "..., 1024) = 1024
+6628  <... write resumed>)              = 57
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" from Suez to Bab-el-mandeb ruli"..., 1024) = 1024
+6628  <... read resumed>"ch she was readily joined by Jan"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"!\r\n  You human forms with the fa"..., 1024) = 1024
+6628  <... read resumed>"could see Elizabeth without scol"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" moved away to distant\r\n      co"..., 1024) = 1024
+6628  <... read resumed>" well married; and she called at"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"g,\r\n  Done with indoor complaint"..., 1024) = 1024
+6628  <... read resumed>"r discharging his conscience on "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"son\342\200\231s carriage, the fop, the e"..., 1024) = 1024
+6628  <... read resumed>"hile her health was so indiffere"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"s!\r\n  You gray stones of intermi"..., 1024) = 1024
+6628  <... read resumed>"on might be too much, she feared"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"eds were all conceiv\342\200\231d in the "..., 1024) = 1024
+6628  <... read resumed>"turned to Longbourn only in time"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"nd women as I go,\r\n  I will toss"..., 1024) = 1024
+6628  <... read resumed>" gloomy thoughts.\r\nLet us hope f"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"of the reality and immortality o"..., 1024) = 1024
+6628  <... read resumed>"at not having had time to pay hi"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"r\342\200\231d gates,\r\n      ever provoki"..., 1024) = 1024
+6628  <... read resumed>"ane, she doubted no more than sh"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"character,\r\n  The fluid and atta"..., 1024) = 1024
+6628  <... read resumed>"n remained the same, her peace e"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"  we cannot remain here,\r\n  Howe"..., 1024) = 1024
+6628  <... read resumed>"ly, that it has not been more th"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"son, no rum-drinker or venereal "..., 1024) = 1024
+6628  <... read resumed>"ndence that can be placed on the"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"he swift and majestic men--they\r"..., 1024) = 1024
+6628  <... read resumed>" as well as I do; and you must f"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"old age of manhood or womanhood,"..., 1024) = 1024
+6628  <... read resumed>"than it does.\"\r\n\"And men take ca"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"     villa, and the chaste bless"..., 1024) = 1024
+6628  <... read resumed>" may wish his increase of wealth"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"orward,\r\n  Stately, solemn, sad,"..., 1024) = 1024
+6628  <... read resumed>" the light in which it may be un"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"e streets of the cities, polite "..., 1024) = 1024
+6628  <... read resumed>"omething to think of, and it giv"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"go well arm\342\200\231d,\r\n  He going wit"..., 1024) = 1024
+6628  <... read resumed>"vassed; and everybody was please"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 5265:"..., 55 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 55
+6628  <... read resumed>"another letter of thanks.\r\nOn th"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"  Crowds of men and women attire"..., 1024) = 1024
+6628  <... read resumed>" to relate, and much to complain"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"hore,\r\n  Others will watch the r"..., 1024) = 1024
+6628  <... read resumed>"you tell us, of long sleeves.\"\r\n"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"urried,\r\n  Just as you look on t"..., 1024) = 1024
+6628  <... read resumed>"ove' is so hackneyed, so doubtfu"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 2081:"..., 56 <unfinished ...>
+6629  <... read resumed>"e ships at anchor,\r\n  The sailor"..., 1024) = 1024
+6628  <... write resumed>)              = 56
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" These and all else were to me t"..., 1024) = 1024
+6628  <... read resumed>"- and perhaps a little relief fr"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"at I should be I knew I\r\n      s"..., 1024) = 1024
+6628  <... read resumed>"orrespond with his sister?\r\nShe "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"on my neck as I stood, or the ne"..., 1024) = 1024
+6628  <... read resumed>"hout its engagement.\r\nMrs. Benne"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 5414:"..., 76 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 76
+6628  <... read resumed>"gh Wickham had been little there"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" of flood-tide?\r\n  The sea-gulls"..., 1024) = 1024
+6628  <... read resumed>"one; after honestly telling her "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"lyn!\r\n  Throb, baffled and curio"..., 1024) = 1024
+6628  <... read resumed>"it.\"\r\n\"Elizabeth, you are not se"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" or down, white-sail\342\200\231d\r\n      "..., 1024) = 1024
+6628  <... read resumed>"ieve myself his first object.\r\nW"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"perfection in you also,\r\n  You f"..., 1024) = 1024
+6628  <... read resumed>"abode with the Lucases, his arri"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"e, animals,\r\n  The profound eart"..., 1024) = 1024
+6628  <... read resumed>"otte,\"and I hope you will consen"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"s vain to skulk--do you hear tha"..., 1024) = 1024
+6628  <... read resumed>"\r\nShe wrote cheerfully, seemed s"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 5527:"..., 62 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 62
+6628  <... read resumed>"et.\"\r\nShe wrote again when the v"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ly and alike How are you friend?"..., 1024) = 1024
+6628  <... read resumed>"or her, the visitor did at last "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"n the traveler\342\200\231s coffee-house "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" before, said not a word of wish"..., 1024) = 1024
+6629  <... read resumed>"of poems settles justice, realit"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"f talking, as if she wanted to p"..., 1024) = 1024
+6629  <... read resumed>"f sons is the exuding of the gre"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"not even wish for a renewal of h"..., 1024) = 1024
+6629  <... read resumed>"ne to his or her terminus or to "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"able; but Elizabeth, less clear-"..., 1024) = 1024
+6629  <... read resumed>" of dwellings--\r\n      always th"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"to all my acquaintances were I d"..., 1024) = 1024
+6629  <... read resumed>"aunting the Adirondacks the\r\n   "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"s, with such a mother and such u"..., 1024) = 1024
+6629  <... read resumed>"ing slowly high beyond the tree "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"mired; and in his manner of bidd"..., 1024) = 1024
+6629  <... read resumed>";\r\n  Deep in the forest in piney"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"our miles, and they began it so "..., 1024) = 1024
+6629  <... read resumed>"      excursion returning home a"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"uld not continue long.\r\nMrs. Gar"..., 1024) = 1024
+6629  <... read resumed>"moke first toward the sun and th"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"But he paid her not the smallest"..., 1024) = 1024
+6629  <... read resumed>"Baltimore, Charleston, New\r\n    "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"and their intimate friends who l"..., 1024) = 1024
+6629  <... read resumed>"art of that, whatever it is,\r\n  "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ransport we shall spend!\r\nAnd wh"..., 1024) = 1024
+6629  <... read resumed>"e moose, large as an ox, corner\342"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"t the recollection of all that s"..., 1024) = 1024
+6629  <... read resumed>"ord the like to you?\r\n  Whoever "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" as soon as they were in the par"..., 1024) = 1024
+6629  <... read resumed>"esome saunter over fields and hi"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" the fender, to give an account "..., 1024) = 1024
+6629  <... read resumed>"f soothing and pacifying, the jo"..., 1024) = 1024
+6628  read(3, "s house.\r\nIt was a handsome mode"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"f grown and part-grown boys, who"..., 1024) = 1024
+6628  <... read resumed>"e Bourgh on the ensuing Sunday a"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" Another time trailing for blue-"..., 1024) = 1024
+6628  <... read resumed>"solitude of her chamber, had to "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"\r\n  To feel the presence of a br"..., 1024) = 1024
+6628  <... read resumed>"stions in vain; Maria would tell"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"      vigorous arm;\r\n  O swift a"..., 1024) = 1024
+6628  <... read resumed>"\"\r\n Mr. Collins and Charlotte we"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"  than the bloom of youth?\r\n  Wh"..., 1024) = 1024
+6628  <... read resumed>" enough.\"I confess,\" said he, \"t"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"sconsinese\342\200\231, Kanadian\342\200\231s, Iow"..., 1024) = 1024
+6628  <... read resumed>"ing for the toilette, he said to"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ou the excellent joys of youth?\r"..., 1024) = 1024
+6628  <... read resumed>"\r\nEvery park has its beauty and "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ul criticisms,\r\n  To these proud"..., 1024) = 1024
+6628  <... read resumed>"condescension, arose to receive "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"the scaffold, to advance to the "..., 1024) = 1024
+6628  <... read resumed>" tone, as marked her self-import"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"hapes and attributes of strong s"..., 1024) = 1024
+6628  <... read resumed>"rming them that it was much bett"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>",\r\n  Lands of iron--lands of the"..., 1024) = 1024
+6628  <... read resumed>" latter said not a word to her a"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"  The beauty of independence, de"..., 1024) = 1024
+6628  <... read resumed>"s of her discourse with Mrs. Col"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"     were prepared,\r\n  The blows"..., 1024) = 1024
+6628  <... read resumed>"you.\r\nOur instrument is a capita"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 6139:"..., 67 <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 2430:"..., 56 <unfinished ...>
+6629  <... write resumed>)              = 67
+6628  <... write resumed>)              = 56
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"  The piles of materials, the mo"..., 1024) = 1024
+6628  <... read resumed>" some families, I believe we wer"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"cut away of connecting wood-work"..., 1024) = 1024
+6628  <... read resumed>", \221you have given me a treasure."..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" the truce\r\n      and parley,\r\n "..., 1024) = 1024
+6628  <... read resumed>"herine seemed quite astonished a"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"st built steamships?\r\n  Or hotel"..., 1024) = 1024
+6628  <... read resumed>" in agreeing to everything her l"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 6224:"..., 64 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 64
+6628  <... read resumed>" very soon obliged to take her l"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"e the city stands with the brawn"..., 1024) = 1024
+6628  <... read resumed>"nt aspect; but she soon saw that"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 6245:"..., 68 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 68
+6628  <... read resumed>"a call from her ladyship, and no"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"re encouraged,\r\n  Where women wa"..., 1024) = 1024
+6628  <... read resumed>"here being only one card-table i"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ty, traditions, statute-books, n"..., 1024) = 1024
+6628  <... read resumed>"th had heard soon after her arri"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ia,\r\n  Served those who time out"..., 1024) = 1024
+6628  <... read resumed>"ews of Lady Catherine to require"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>",\r\n  Ghosts of dead lords, uncro"..., 1024) = 1024
+6628  <... read resumed>" with every appearance of compos"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"wbar, spade,\r\n  Shingle, rail, p"..., 1024) = 1024
+6628  <... read resumed>"\nChapter 31\r\n Colonel Fitzwillia"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" and fun,\r\n  Dwellers along the "..., 1024) = 1024
+6628  <... read resumed>"ost engrossed by her nephews, sp"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"hape for the dead to lie within "..., 1024) = 1024
+6628  <... read resumed>"he, when no longer able to avoid"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" the sly settee, and the adulter"..., 1024) = 1024
+6628  <... read resumed>"l young ladies that no excellenc"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"the less considerate or friendly"..., 1024) = 1024
+6628  <... read resumed>"ause, turned to him with an arch"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 6447:"..., 55 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 55
+6628  <... read resumed>"cy, it is very ungenerous in you"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"t is already founded,\r\n  To give"..., 1024) = 1024
+6628  <... read resumed>"play next?\r\nMy fingers wait your"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"r sphere, a wide, untried domain"..., 1024) = 1024
+6628  <... read resumed>"osed it to be my own fault - bec"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"nded, deceas\342\200\231d through time, h"..., 1024) = 1024
+6628  <... read resumed>"r could she discern any symptom "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" world, with all its gorgeous le"..., 1024) = 1024
+6628  <... read resumed>". Darcy, and Mr. Darcy only, ent"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ds,\r\n  And ever henceforth siste"..., 1024) = 1024
+6628  <... read resumed>" idea of ever returning to Nethe"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" scan and prophesy outside and i"..., 1024) = 1024
+6628  <... read resumed>"elieve, did a great deal to it w"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"t in the very field,\r\n  Shall be"..., 1024) = 1024
+6628  <... read resumed>"s of the match,\" cried Elizabeth"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" None shall be slighted, none bu"..., 1024) = 1024
+6628  <... read resumed>"y strong local attachment.\r\nYou "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ves, not reasoning men,\r\n  And i"..., 1024) = 1024
+6628  <... read resumed>"is visit to proceed from the dif"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" do something, for every woman t"..., 1024) = 1024
+6628  <... read resumed>" he might have the best informed"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ortation of the world,\r\n  Steam-"..., 1024) = 1024
+6628  <... read resumed>"ten doubted whether there were m"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"! (and thou, ineffable guest and"..., 1024) = 1024
+6628  <... read resumed>"uld bring him where no one else "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"\r\n  Thy continual workshops, fou"..., 1024) = 1024
+6628  <... read resumed>"Colonel Fitzwilliam in his thoug"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"r ship, nor mine, nor any here t"..., 1024) = 1024
+6628  <... read resumed>" off again.\r\nBut I am at his dis"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"n have I seen go under.\r\n\r\n  Now"..., 1024) = 1024
+6628  <... read resumed>"m want of money.\r\nYounger sons c"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"g, departing, or hamadryads depa"..., 1024) = 1024
+6628  <... read resumed>"ay do what he likes with her.\"\r\n"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"om its lofty top rising two hund"..., 1024) = 1024
+6628  <... read resumed>"tlemanlike man - he is a great f"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" time,\r\n  For them we abdicate, "..., 1024) = 1024
+6628  <... read resumed>"ulars, and I only suspected it t"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"nd source of all, whence life an"..., 1024) = 1024
+6628  <... read resumed>"ner his friend was to be happy.\r"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"re laugh with storm or sun, here"..., 1024) = 1024
+6628  <... read resumed>"ed; but she had always attribute"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ds,\r\n  The long and varied stret"..., 1024) = 1024
+6628  <... read resumed>" he will probably never reach.\" "..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 6910:"..., 64 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 64
+6628  <... read resumed>"\r\nChapter 34\r\n When they were go"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"f thousands of years,\r\n      til"..., 1024) = 1024
+6628  <... read resumed>" in less than a fortnight she sh"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" to you as the boss employing an"..., 1024) = 1024
+6628  <... read resumed>"oments, and then getting up, wal"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 6964:"..., 62 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 62
+6628  <... read resumed>" could not be insensible to the "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>", why\r\n      I often meet strang"..., 1024) = 1024
+6628  <... read resumed>"ually they may be returned.\r\nIt "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"nd she is not one jot less than "..., 1024) = 1024
+6628  <... read resumed>"all the reply which I am to have"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"st, readiest, it is ever provoke"..., 1024) = 1024
+6628  <... read resumed>" unjust and ungenerous part you "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"fect complaisance devours all th"..., 1024) = 1024
+6628  <... read resumed>"inued, \"on which my dislike is f"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"  Old institutions, these arts, "..., 1024) = 1024
+6628  <... read resumed>"ave done all this!\r\nand yet you "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"t is not you who\r\n      are here"..., 1024) = 1024
+6628  <... read resumed>" congratulate myself on the hope"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" the violins and the cornets, it"..., 1024) = 1024
+6628  <... read resumed>" to form the groundwork of disap"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 7103:"..., 69 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 69
+6628  <... read resumed>"ite of all the objections which "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"through smutch\342\200\231d faces,\r\n  Iro"..., 1024) = 1024
+6628  <... read resumed>"it was impossible to think of an"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"oods of gutta-percha, papier-mac"..., 1024) = 1024
+6628  <... read resumed>"ating.\r\nBut the person who advan"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"     butcher in his killing-clot"..., 1024) = 1024
+6628  <... read resumed>"s: - \r\n\"Be not alarmed, madam, o"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"es, hints, possibilities.\r\n\r\n  I"..., 1024) = 1024
+6628  <... read resumed>"sperity and blasted the prospect"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"scends and goes instead of the c"..., 1024) = 1024
+6628  <... read resumed>"her young woman in the country.\r"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 7222:"..., 60 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 60
+6628  <... read resumed>" I must have been in error.\r\nYou"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ords are more delicious than the"..., 1024) = 1024
+6628  <... read resumed>"epugnance; causes which, though "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" from the jump,\r\n  It is not hal"..., 1024) = 1024
+6628  <... read resumed>"d have led me before, to preserv"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"or refuse to exhibit itself,\r\n  "..., 1024) = 1024
+6628  <... read resumed>"d.\r\nBut Bingley has great natura"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"while her\r\n      eyes glance bac"..., 1024) = 1024
+6628  <... read resumed>"r.\r\nIf I have wounded your siste"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"st, sure and necessary as they.\r"..., 1024) = 1024
+6628  <... read resumed>"e him a gentleman's education.\r\n"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"r another--not one,\r\n  Not one c"..., 1024) = 1024
+6628  <... read resumed>" he particularly recommended it "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"  No politics, song, religion, b"..., 1024) = 1024
+6628  <... read resumed>"h, were it possible that he coul"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"s not what you anticipated, it i"..., 1024) = 1024
+6628  <... read resumed>"entions.\r\nYou will hardly blame "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"and ready, the architects shall "..., 1024) = 1024
+6628  <... read resumed>" for there proved to have been a"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 7424:"..., 71 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 71
+6628  <... read resumed>" unquestionably my sister's fort"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"easureless grossness and the sla"..., 1024) = 1024
+6628  <... read resumed>"macy, and, still more, as one of"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ad majority, the varied countles"..., 1024) = 1024
+6628  <... read resumed>" give, which a just sense of sha"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" faiths of other lands, the gran"..., 1024) = 1024
+6628  <... read resumed>"cutely painful and more difficul"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"s! O pioneers!\r\n\r\n       For we "..., 1024) = 1024
+6628  <... read resumed>"rds.\r\nSo far each recital confir"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"\r\n       We primeval forests fel"..., 1024) = 1024
+6628  <... read resumed>"han infamous, was capable of a t"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"istress, stern, impassive, weapo"..., 1024) = 1024
+6628  <... read resumed>"der which she would endeavour to"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" seamen and the landsmen, all th"..., 1024) = 1024
+6628  <... read resumed>" the application, and at length "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"er must you be divided, in our r"..., 1024) = 1024
+6628  <... read resumed>"ssed; that he had then no reserv"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"loud and clear I hear it wind,\r\n"..., 1024) = 1024
+6628  <... read resumed>"acquaintance - an acquaintance w"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 7683:"..., 60 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 60
+6628  <... read resumed>"ities!\r\nwho have often disdained"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"e and make the hymns of you,\r\n  "..., 1024) = 1024
+6628  <... read resumed>"ot help remembering what Charlot"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"hat you have done returns alread"..., 1024) = 1024
+6628  <... read resumed>"lected how materially the credit"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" like carefully\r\n      to you,\r\n"..., 1024) = 1024
+6628  <... read resumed>"william was no longer an object;"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"year and place\r\n  A harsh discor"..., 1024) = 1024
+6628  <... read resumed>"he amused herself.\r\nTheir first "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>",\r\n  Here too could rise at last"..., 1024) = 1024
+6628  <... read resumed>"e.\"\r\n\"I am much obliged to your "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" gun, to sail a\r\n      boat, to "..., 1024) = 1024
+6628  <... read resumed>"e must abide by our original pla"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 7821:"..., 62 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 62
+6628  <... read resumed>" glad you have somebody who thin"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>", pages, languages, reminiscence"..., 1024) = 1024
+6628  <... read resumed>"elf; and his disappointed feelin"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"e life is not short, but immeasu"..., 1024) = 1024
+6628  <... read resumed>"-willed and careless, would scar"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 7849:"..., 66 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 66
+6628  <... read resumed>"ossible for her to appear tolera"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>", some fill\342\200\231d with\r\n      immi"..., 1024) = 1024
+6628  <... read resumed>"Collins has yet expressed her se"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 7881:"..., 66 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 66
+6628  <... read resumed>" best; and most fortunately havi"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"I sing--with gleams from them wo"..., 1024) = 1024
+6628  <... read resumed>" do so.\r\nLady Catherine's great "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ms and kings over there,\r\n  With"..., 1024) = 1024
+6628  <... read resumed>"did not seem to ask for compassi"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"any part? any thing in the past?"..., 1024) = 1024
+6628  <... read resumed>"en here.\"\r\nElizabeth made no obj"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"days, all races,\r\n  And there is"..., 1024) = 1024
+6628  <... read resumed>" before she told her sister of M"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"he countless straight stems, the"..., 1024) = 1024
+6628  <... read resumed>"an opposite milliner, watching t"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 7994:"..., 68 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 68
+6628  <... read resumed>"ing in a fortnight.\"\r\n\"Are they "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"st of languages, the bequeather "..., 1024) = 1024
+6628  <... read resumed>" not hear, as if he cared!\r\nI da"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"he coast beyond,\r\n  The coast yo"..., 1024) = 1024
+6628  <... read resumed>" and the elder ones paid, the ca"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 8032:"..., 66 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 66
+6628  <... read resumed>" like to be married before any o"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 8039:"..., 70 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 70
+6628  <... read resumed>"t was the matter.\"\r\n With such k"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"you.\r\n\r\n  For I too raising my v"..., 1024) = 1024
+6628  <... read resumed>"numerating the various pleasures"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"\r\n  As to-morrow from the other "..., 1024) = 1024
+6628  <... read resumed>"er a book.\"\r\n But of this answer"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"rd for your sake Libertad.\r\n\r\n\r\n"..., 1024) = 1024
+6628  <... read resumed>"tion of yielding; but his answer"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ting,\r\n  As a flock, twittering,"..., 1024) = 1024
+6628  <... read resumed>"it must increase his disappointm"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 8139:"..., 68 <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 3267:"..., 54 <unfinished ...>
+6629  <... write resumed>)              = 68
+6628  <... write resumed>)              = 54
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"blow north,\r\n  Day come white, o"..., 1024) = 1024
+6628  <... read resumed>"Elizabeth; \"you never will be ab"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 8163:"..., 65 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 65
+6628  <... read resumed>"n makes me saving; and if you la"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"he meanings which I of all men k"..., 1024) = 1024
+6628  <... read resumed>"ut what I felt, no Jane to comfo"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 8180:"..., 70 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 70
+6628  <... read resumed>"ho will believe me?\r\nThe general"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 8188:"..., 71 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 71
+6628  <... read resumed>"alf of Mr. Darcy's letter, nor e"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 8197:"..., 69 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 69
+6628  <... read resumed>"all her good sense, and all her "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ack thing I see there in the whi"..., 1024) = 1024
+6628  <... read resumed>" die of a broken heart; and then"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 8202:"..., 65 <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 3358:"..., 55 <unfinished ...>
+6629  <... write resumed>)              = 65
+6628  <... write resumed>)              = 55
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"he droops almost down into the s"..., 1024) = 1024
+6628  <... read resumed>"often talk of it between themsel"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" fields,\r\n  Loved! loved! loved!"..., 1024) = 1024
+6628  <... read resumed>"enty years ago.\r\n\"I am sure,\" sa"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 8260:"..., 82 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 82
+6628  <... read resumed>"y lately married.\r\nA resemblance"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"soul,)\r\n  Is it indeed toward yo"..., 1024) = 1024
+6628  <... read resumed>"r the same feelings as in her mo"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"(for I will conquer it,)\r\n  The "..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 8317:"..., 82 <unfinished ...>
+6628  <... read resumed>"en from it, I am sure you would "..., 1024) = 1024
+6629  <... write resumed>)              = 82
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"determined flirt that ever made "..., 1024) = 1024
+6629  <... read resumed>"ng and all songs,\r\n  That strong"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ourn if Lydia does not go to Bri"..., 1024) = 1024
+6629  <... read resumed>"ft by the tide,\r\n  Miles walking"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" have found expression in their "..., 1024) = 1024
+6629  <... read resumed>", untold, altogether unreach\342\200\231d"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"d passed; and their raptures con"..., 1024) = 1024
+6629  <... read resumed>"upon you, you fish-shaped island"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" gratified, and her preference s"..., 1024) = 1024
+6629  <... read resumed>"ting another,\r\n  From the storm,"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 8439:"..., 68 <unfinished ...>
+6628  <... read resumed>" I think Mr. Darcy improves upon"..., 1024) = 1024
+6629  <... write resumed>)              = 68
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"minutes he was silent, till, sha"..., 1024) = 1024
+6629  <... read resumed>"ries;\r\n  O storm, embodied, risi"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"f his grievances, and she was in"..., 1024) = 1024
+6629  <... read resumed>"born to match the gale, (thou ar"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"'s opinion been all drawn from h"..., 1024) = 1024
+6629  <... read resumed>".\r\n\r\n  But O the ship, the immor"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"o his wife; but where other powe"..., 1024) = 1024
+6629  <... read resumed>"r shall emerge, be patient, watc"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 8538:"..., 64 <unfinished ...>
+6628  <... read resumed>" other cause for satisfaction in"..., 1024) = 1024
+6629  <... write resumed>)              = 64
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"n, console herself for the prese"..., 1024) = 1024
+6629  <... read resumed>"strange flowers and seeds, the t"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ined little else than that they "..., 1024) = 1024
+6629  <... read resumed>"ing her husky song,\r\n  As I watc"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"vent of such happy promise as to"..., 1024) = 1024
+6629  <... read resumed>"of waves spreading and spreading"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"seen to occupy the chief of thei"..., 1024) = 1024
+6629  <... read resumed>"ignal for all nations, emblem of"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ardiner, with their four childre"..., 1024) = 1024
+6629  <... read resumed>"er remitting,\r\n  Along the midni"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"e sufficiently known.\r\nA small p"..., 1024) = 1024
+6629  <... read resumed>"XX.  BY THE ROADSIDE\r\n\r\n\r\nA Bost"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 8694:"..., 66 <unfinished ...>
+6628  <... read resumed>"She must own that she was tired "..., 1024) = 1024
+6629  <... write resumed>)              = 66
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ly were down for the summer?\r\nA "..., 1024) = 1024
+6629  <... read resumed>"\r\n  What troubles you Yankee pha"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 8708:"..., 62 <unfinished ...>
+6628  <... read resumed>"of a considerable eminence, wher"..., 1024) = 1024
+6629  <... write resumed>)              = 62
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"lace, they were admitted into th"..., 1024) = 1024
+6629  <... read resumed>"rant from the Parliament, go wit"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 8732:"..., 64 <unfinished ...>
+6628  <... read resumed>" Elizabeth saw, with admiration "..., 1024) = 1024
+6629  <... write resumed>)              = 64
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ad not by any circumstance been "..., 1024) = 1024
+6629  <... read resumed>"ere is one of your bargains.\r\n\r\n"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"s intimation of her knowing her "..., 1024) = 1024
+6629  <... read resumed>"ome back,\r\n  Each comes in state"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"cativeness by his questions and "..., 1024) = 1024
+6629  <... read resumed>" were purified by death, they we"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"his was praise, of all others mo"..., 1024) = 1024
+6629  <... read resumed>" clogged with abomination,\r\n  Bl"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"es, the dimensions of the rooms,"..., 1024) = 1024
+6629  <... read resumed>"rous orb of sun or star by night"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ove they were shown into a very "..., 1024) = 1024
+6629  <... read resumed>"ey ever continued;)\r\n  Of what w"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"y family portraits, but they cou"..., 1024) = 1024
+6629  <... read resumed>" of the faithless, of cities fil"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"bestow!\r\n- how much of good or e"..., 1024) = 1024
+6629  <... read resumed>".\r\n\r\n\r\n\r\n\r\nI Sit and Look Out\r\n\r"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"sight.\r\nTheir eyes instantly met"..., 1024) = 1024
+6629  <... read resumed>"Rich Givers\r\n\r\n  What you give m"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ered was increasing her embarras"..., 1024) = 1024
+6629  <... read resumed>"loosing,\r\n  Upward again on slow"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" not strike so vain a man!\r\nIt m"..., 1024) = 1024
+6629  <... read resumed>"\n\r\n\r\n\r\n\r\nBeautiful Women\r\n\r\n  Wo"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"d a nobler fall of ground, or a "..., 1024) = 1024
+6629  <... read resumed>"l,\r\n  Through Nature, Time, and "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 9140:"..., 62 <unfinished ...>
+6628  <... read resumed>"herself.\r\nThey entered the woods"..., 1024) = 1024
+6629  <... write resumed>)              = 62
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"its windings; but when they had "..., 1024) = 1024
+6629  <... read resumed>"and women appear,\r\n  Around each"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ed for an interview than before,"..., 1024) = 1024
+6629  <... read resumed>"w she gave the cue,\r\n  How at on"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"f some of those very people agai"..., 1024) = 1024
+6629  <... read resumed>"en and the workshops, and throug"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"n turned upon fishing; and she h"..., 1024) = 1024
+6629  <... read resumed>"the wharves,\r\n  (How good they l"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ter-plant, there chanced to be a"..., 1024) = 1024
+6629  <... read resumed>"nt, bandages and medicines,\r\n  T"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 9262:"..., 64 <unfinished ...>
+6628  <... read resumed>"Mr. Bingley and his sisters.\"\r\nE"..., 1024) = 1024
+6629  <... write resumed>)              = 64
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" she was flattered and pleased.\r"..., 1024) = 1024
+6629  <... read resumed>"e year,\r\n  Not you as some pale "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"him walking slowly towards the h"..., 1024) = 1024
+6629  <... read resumed>"aunch\342\200\231d forth again and again,"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"n before, and that she had never"..., 1024) = 1024
+6629  <... read resumed>"tempt to sing?\r\n  Would the lawy"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"y virtue.\"\r\n Elizabeth here felt"..., 1024) = 1024
+6629  <... read resumed>"rs,\r\n  To Tennessee and Kentucky"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"quest of her former acquaintance"..., 1024) = 1024
+6629  <... read resumed>"\231s desire and babe\342\200\231s desire, I"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"reet.\r\nElizabeth immediately rec"..., 1024) = 1024
+6629  <... read resumed>"ng to crawl along the streets wi"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"reated from the window, fearful "..., 1024) = 1024
+6629  <... read resumed>"l of people--it has children,\r\n "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 9422:"..., 60 <unfinished ...>
+6628  <... read resumed>"an observer as ever Mr. Darcy ha"..., 1024) = 1024
+6629  <... write resumed>)              = 60
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" with an earnest though guarded "..., 1024) = 1024
+6629  <... read resumed>" the drums beat and the trumpets"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 9447:"..., 67 <unfinished ...>
+6628  <... read resumed>"trying to trace a resemblance.\r\n"..., 1024) = 1024
+6629  <... write resumed>)              = 67
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"k occasion to ask her, when unat"..., 1024) = 1024
+6629  <... read resumed>"nd many more to come,)\r\n  See fo"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"so forcibly on her mind, that sh"..., 1024) = 1024
+6629  <... read resumed>"n and out are ours--while we ove"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" acceptance, but Elizabeth had t"..., 1024) = 1024
+6629  <... read resumed>"Demons and death then I sing,\r\n "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"d away to dress.\r\nBut she had no"..., 1024) = 1024
+6629  <... read resumed>"ut out of the night emerging for"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ng occurred in the intelligence "..., 1024) = 1024
+6629  <... read resumed>"llent stores, nor landed on whar"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 9540:"..., 68 <unfinished ...>
+6628  <... read resumed>" had vanished long ago, and she "..., 1024) = 1024
+6629  <... write resumed>)              = 68
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" regard, or any peculiarity of m"..., 1024) = 1024
+6629  <... read resumed>"nes\r\n      are nothing--I see th"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"reakfast, ought to be imitated, "..., 1024) = 1024
+6629  <... read resumed>"us thunder as it bellow\342\200\231d afte"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" refreshing view of the high woo"..., 1024) = 1024
+6629  <... read resumed>"pe of death under the black clou"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"d,\r\n  One doubt nauseous undulat"..., 1024) = 1024
+6628  <... read resumed>"rdiner, with occasional help fro"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"beyance,)\r\n  The insane knife to"..., 1024) = 1024
+6628  <... read resumed>"he health of her family.\r\nShe an"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ity of tall facades of marble an"..., 1024) = 1024
+6628  <... read resumed>"ngaged by the river, and had lef"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 9682:"..., 64 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 64
+6628  <... read resumed>"w all this likewise; and, in the"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ties serve you, and presently I "..., 1024) = 1024
+6628  <... read resumed>"her betray a sensibility which m"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"o listen and tell.\r\n\r\n       [Th"..., 1024) = 1024
+6628  <... read resumed>"r, whose eye she feared to meet,"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"s, I mark the uplands and slopes"..., 1024) = 1024
+6628  <... read resumed>"o brown and coarse!\r\nLouisa and "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ronting death?\r\n  It was the bri"..., 1024) = 1024
+6628  <... read resumed>"y people are not always wise; an"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" of a pitch\342\200\231d battle.\r\n\r\n  We "..., 1024) = 1024
+6628  <... read resumed>"urned, except what had particula"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" a ghost while they thought they"..., 1024) = 1024
+6628  <... read resumed>"enjoy them in quiet, set off by "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" and westward,\r\n  I must preserv"..., 1024) = 1024
+6628  <... read resumed>"d.\r\nThoughtless and indiscreet I"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"      the musical clank,\r\n  Beho"..., 1024) = 1024
+6628  <... read resumed>"other, and opening it with the u"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" skirmishers in advance,\r\n  With"..., 1024) = 1024
+6628  <... read resumed>"g the alarm, set off from B. int"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"e far away;\r\n  A solemn and slow"..., 1024) = 1024
+6628  <... read resumed>"to pursue their first plan; and "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"\r\n  Fast as she can she hurries,"..., 1024) = 1024
+6628  <... read resumed>"are such that I cannot help earn"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"  better, that brave and simple "..., 1024) = 1024
+6628  <... read resumed>"cover himself to speak, she, in "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"our body son of\r\n      respondin"..., 1024) = 1024
+6628  <... read resumed>"seration, \"Let me call your maid"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" in his blanket, envelop\342\200\231d wel"..., 1024) = 1024
+6628  <... read resumed>"tonishment. \"\r\nWhen I consider,\""..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"\200\231Tis a large old church at the "..., 1024) = 1024
+6628  <... read resumed>"hen my eyes were opened to his r"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"nks or stretchers, some in the\r\n"..., 1024) = 1024
+6628  <... read resumed>"d covering her face with her han"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"g all.\r\n\r\n  Curious I halt and s"..., 1024) = 1024
+6628  <... read resumed>"er distress, wished it a happier"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"r, when up! no time to lose--yet"..., 1024) = 1024
+6628  <... read resumed>" except that she had given somew"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"hat Trembled and Reel\342\200\231d Beneat"..., 1024) = 1024
+6628  <... read resumed>"ydia to be deliberately engaging"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"f earth,\r\n  Of those armies so r"..., 1024) = 1024
+6628  <... read resumed>"cle's interference seemed of the"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ile for you up there,\r\n  Whoever"..., 1024) = 1024
+6628  <... read resumed>"t for us; was it so?\"\r\n\"Yes; and"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"crush\342\200\231d head I dress, (poor cr"..., 1024) = 1024
+6628  <... read resumed>"e carriage, and on the road to L"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"he tray and pail.\r\n\r\n  I am fait"..., 1024) = 1024
+6628  <... read resumed>"izzy, so wholly give him up, as "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"(For who except myself has yet c"..., 1024) = 1024
+6628  <... read resumed>"t particular friend, you see by "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ties!\r\n\r\n  These demanding to ha"..., 1024) = 1024
+6628  <... read resumed>"nt to live with him on any terms"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" lovers by the thousand!\r\n  Let "..., 1024) = 1024
+6628  <... read resumed>"tivate a woman.\"\r\n\"But you see t"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 10278"..., 75 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 75
+6628  <... read resumed>"to relate; but his lies about th"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"orus, the rustle and clank of mu"..., 1024) = 1024
+6628  <... read resumed>"ing her eyes to his character ne"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" veterans son and father dropt t"..., 1024) = 1024
+6628  <... read resumed>" however little of novelty could"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"e,\r\n  They shall yet make Columb"..., 1024) = 1024
+6628  <... read resumed>", hurried into the vestibule, wh"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 4128:"..., 63 <unfinished ...>
+6629  <... read resumed>".\r\n\r\n  (Were you looking to be h"..., 1024) = 1024
+6628  <... write resumed>)              = 63
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"I wake from sleep this vision pr"..., 1024) = 1024
+6628  <... read resumed>", are quite well.\"\r\n\"But you - h"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"delay,)\r\n  I breathe the suffoca"..., 1024) = 1024
+6628  <... read resumed>"ation together, received them ex"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"\r\n\r\n\r\nEthiopia Saluting the Colo"..., 1024) = 1024
+6628  <... read resumed>"is cold in his grave, and if you"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"r delicatesse, I cannot beguile "..., 1024) = 1024
+6628  <... read resumed>"em out, wherever they may be; an"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"oy\r\n\r\n  O tan-faced prairie-boy,"..., 1024) = 1024
+6628  <... read resumed>"er feelings on the housekeeper, "..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 10513"..., 66 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 66
+6628  <... read resumed>"o whisper to Elizabeth, with a c"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"e white face in the coffin.\r\n\r\n\r"..., 1024) = 1024
+6628  <... read resumed>"y availed herself of the opportu"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" words are weapons full of dange"..., 1024) = 1024
+6628  <... read resumed>"uld not marry?\r\nDid he know of t"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ty--ah my woolly white and crims"..., 1024) = 1024
+6628  <... read resumed>"s.\"\r\n\"But not before they went t"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ess beleaguering toils, after th"..., 1024) = 1024
+6628  <... read resumed>"not help laughing myself at your"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"return from the battles,\r\n  As t"..., 1024) = 1024
+6628  <... read resumed>"ourney.\"Your affectionate friend"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"he strong terrific game,\r\n  Spel"..., 1024) = 1024
+6628  <... read resumed>"ance upon her has been too much "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"orld,\r\n  Leave to the singers of"..., 1024) = 1024
+6628  <... read resumed>".\"\r\n She then proceeded to inqui"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"s of the poems of heroes, to the"..., 1024) = 1024
+6628  <... read resumed>"Chapter 48\r\n The whole party wer"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"black murk that hides the star!\r"..., 1024) = 1024
+6628  <... read resumed>" Bennet, and was a great comfort"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"Amid lanes and through old woods"..., 1024) = 1024
+6628  <... read resumed>", became almost hopeless, more e"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"with the thousand voices rising "..., 1024) = 1024
+6628  <... read resumed>"e was also a postscript to this "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"had something to tell as you ben"..., 1024) = 1024
+6628  <... read resumed>"ble, however, that some of his c"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"w shall I deck my song for the l"..., 1024) = 1024
+6628  <... read resumed>"e grievous affliction you are no"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"gainst the sky,\r\n      and shado"..., 1024) = 1024
+6628  <... read resumed>" an enormity, at so early an age"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"s and pines.\r\n\r\n  Sing on deares"..., 1024) = 1024
+6628  <... read resumed>"to send.\r\nIt was not known that "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>",\r\n  And the streets how their t"..., 1024) = 1024
+6628  <... read resumed>"\nI had not an idea of it.\"\r\n Mr."..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"  And the charm of the carol rap"..., 1024) = 1024
+6628  <... read resumed>"\nMrs. Gardiner went away in all "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" Dances for thee I propose salut"..., 1024) = 1024
+6628  <... read resumed>"ing; made no mention of the busi"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" was bound in my eyes unclosed,\r"..., 1024) = 1024
+6628  <... read resumed>"rt silence he continued:\r\n\"Lizzy"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ird and the tallying song of my "..., 1024) = 1024
+6628  <... read resumed>"ut of doors till you can prove t"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"he bird,\r\n  Comrades mine and I "..., 1024) = 1024
+6628  <... read resumed>"as been here this half-hour, and"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>";\r\n      Here Captain! dear fath"..., 1024) = 1024
+6628  <... read resumed>"ed?\" said he, taking the letter "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ou, dweller in camps, know it tr"..., 1024) = 1024
+6628  <... read resumed>", by settlement, her equal share"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"p.)\r\n\r\n       2\r\n  A Nation anno"..., 1024) = 1024
+6628  <... read resumed>"t be the smallest occasion for y"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"me?\r\n  There can be any number o"..., 1024) = 1024
+6628  <... read resumed>"f.\"\r\n\"I dislike it very much,\" h"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ll that has ever been before?\r\n "..., 1024) = 1024
+6628  <... read resumed>"not do all this.\"\r\n\"No,\" said he"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 11175"..., 65 <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 4430:"..., 60 <unfinished ...>
+6629  <... write resumed>)              = 65
+6628  <... write resumed>)              = 60
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ts a little while in the door, t"..., 1024) = 1024
+6628  <... read resumed>"ng like it, has been advanced.\r\n"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" common stock, having room for f"..., 1024) = 1024
+6628  <... read resumed>" steady them; and I flatter myse"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"turage sweet and natural as sava"..., 1024) = 1024
+6628  <... read resumed>"ope of Lydia's being soon marrie"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"oble character of mechanics and "..., 1024) = 1024
+6628  <... read resumed>"deavoured to give some relief to"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 11251"..., 74 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 74
+6628  <... read resumed>"lico, muslin, and cambric, and w"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"hern plantation life,\r\n  Slavery"..., 1024) = 1024
+6628  <... read resumed>" she might think with freedom.\r\n"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"d.)\r\n\r\n       8\r\n  Others take f"..., 1024) = 1024
+6628  <... read resumed>"e to anyone should be forwarded "..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 11276"..., 65 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 65
+6628  <... read resumed>" the parents.\r\nThis was one poin"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"      as the hold of the limbs o"..., 1024) = 1024
+6628  <... read resumed>"ittle trouble in the business as"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 11300"..., 65 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 65
+6628  <... read resumed>"ances, because with such an husb"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>", rich,\r\n      thrifty, building"..., 1024) = 1024
+6628  <... read resumed>"sband allowed her to talk on wit"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ers up slaves and horrifies fore"..., 1024) = 1024
+6628  <... read resumed>"othes must reflect on her daught"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"es tumble curl\342\200\231d upon the grou"..., 1024) = 1024
+6628  <... read resumed>" with a family where, to every o"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"nstitution?\r\n  Do you see who ha"..., 1024) = 1024
+6628  <... read resumed>"al, there must be a triumph.\r\nSh"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" or done before?\r\n  Have you not"..., 1024) = 1024
+6628  <... read resumed>"to his brother.\r\nTo Mr. Bennet's"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ttanese, Western\r\n      men, Sou"..., 1024) = 1024
+6628  <... read resumed>" prudent.\r\nI have written to Col"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ll his country\r\n      absorbs hi"..., 1024) = 1024
+6628  <... read resumed>"d with it.\r\nLydia's being settle"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" pay I have served for,\r\n  Give "..., 1024) = 1024
+6628  <... read resumed>"ngbourn, as soon as they were ma"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" To life recalling many a prostr"..., 1024) = 1024
+6628  <... read resumed>"f, had she been the culprit, and"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 4603:"..., 56 <unfinished ...>
+6629  <... read resumed>" refuse to treat but directly wi"..., 1024) = 1024
+6628  <... write resumed>)              = 56
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"s power, weapons, testimony, are"..., 1024) = 1024
+6628  <... read resumed>"arless.\r\nShe turned from sister "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"with the whole earth,\r\n  Who ina"..., 1024) = 1024
+6628  <... read resumed>"at neighbourhood, with a good hu"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 11552"..., 65 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 65
+6628  <... read resumed>"down the side-glass next to him,"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" against yours you orbs, growths"..., 1024) = 1024
+6628  <... read resumed>"he, when they were all returned "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" unwaked, undisclosed, were disc"..., 1024) = 1024
+6628  <... read resumed>"your way of getting husbands.\"\r\n"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"  Let bigots, fools, unclean per"..., 1024) = 1024
+6628  <... read resumed>"f that were the case, he was not"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"toward the mystic ocean tending."..., 1024) = 1024
+6628  <... read resumed>"thers were to meet us at the chu"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"l I give,)\r\n  These waifs from t"..., 1024) = 1024
+6628  <... read resumed>"one.\r\nAnd then, you know, when o"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"e snows, the winds\342\200\231 free orche"..., 1024) = 1024
+6628  <... read resumed>"ll, and then Wickham would be an"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 11703"..., 69 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 69
+6628  <... read resumed>"have been amongst you at such a "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"n\r\n      thy world, and lookest "..., 1024) = 1024
+6628  <... read resumed>" length of the letter convinced "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"late I stood and watch\342\200\231d you, "..., 1024) = 1024
+6628  <... read resumed>"seems to have been.\r\nHe came to "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"lently by me.\r\n\r\n       6\r\n  I s"..., 1024) = 1024
+6628  <... read resumed>"is search, which was more than w"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"dly arms,\r\n  Other the arms the "..., 1024) = 1024
+6628  <... read resumed>"saw Wickham, and afterwards insi"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ds with herby-perfumed breezes,\r"..., 1024) = 1024
+6628  <... read resumed>"ituation, he could conjecture ve"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"est.\r\n\r\n  All gather and all har"..., 1024) = 1024
+6628  <... read resumed>" on further inquiry, that your f"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 11851"..., 63 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 63
+6628  <... read resumed>"eadily have settled the whole.\"T"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"nder the beaming sun and under t"..., 1024) = 1024
+6628  <... read resumed>"at Wickham's character had been "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"garden,\r\n  And the apple-trees c"..., 1024) = 1024
+6628  <... read resumed>"tle I was satisfied with her beh"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>", unjust,\r\n  The blow, the quick"..., 1024) = 1024
+6628  <... read resumed>"Derbyshire.\r\nHis understanding a"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"d astern,\r\n  The hurrying tumbli"..., 1024) = 1024
+6628  <... read resumed>" time dreaded to be just, from t"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"t there veil\342\200\231d in your old whi"..., 1024) = 1024
+6628  <... read resumed>"ection.\r\nHe had, to be sure, don"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"alone--that wondrous house--that"..., 1024) = 1024
+6628  <... read resumed>"r aunt's commendation of him aga"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 11974"..., 65 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 65
+6628  <... read resumed>", and yet I believe it would be "..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 11984"..., 68 <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 4820:"..., 61 <unfinished ...>
+6629  <... write resumed>)              = 68
+6628  <... write resumed>)              = 61
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" earth as to other flesh to rene"..., 1024) = 1024
+6628  <... read resumed>"h.\"\r\n\"I have heard, indeed, that"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 4836:"..., 58 <unfinished ...>
+6629  <... read resumed>"rces upward,\r\n  The apple-buds c"..., 1024) = 1024
+6628  <... write resumed>)              = 58
+6629  write(1, "tests/leaves-of-grass.txt: 12023"..., 65 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 65
+6628  <... read resumed>"ally only, and at the will of th"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 4859:"..., 55 <unfinished ...>
+6629  <... read resumed>"deposited\r\n      themselves in i"..., 1024) = 1024
+6628  <... write resumed>)              = 55
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"r!\r\n  Keep on--Liberty is to be "..., 1024) = 1024
+6628  <... read resumed>"am was so perfectly satisfied wi"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"their work,\r\n  The named and unn"..., 1024) = 1024
+6628  <... read resumed>"rs, and smirks, and makes love t"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"w what I am for myself,\r\n      n"..., 1024) = 1024
+6628  <... read resumed>"y or two, to shoot there for sev"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"eautiful and poetic, who brutish"..., 1024) = 1024
+6628  <... read resumed>"hree couple of ducks just fit to"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" women that fill\342\200\231d the unnamed"..., 1024) = 1024
+6628  <... read resumed>"friend's permission, or being bo"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  write(1, "tests/pride-sentences.txt: 4921:"..., 54 <unfinished ...>
+6629  <... read resumed>"rop quietly aside from the prude"..., 1024) = 1024
+6628  <... write resumed>)              = 54
+6629  write(1, "tests/leaves-of-grass.txt: 12187"..., 71 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 71
+6628  <... read resumed>"ouring gentlemen, on his returni"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ent, clean, is so much profit to"..., 1024) = 1024
+6628  <... read resumed>"eans well; but she does not know"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>" honest men baffled in strifes r"..., 1024) = 1024
+6628  <... read resumed>"e saw Mr. Darcy with him, and sa"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"her,\r\n  Without the farthest con"..., 1024) = 1024
+6628  <... read resumed>"ither of them.\r\nBut Elizabeth ha"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 12248"..., 65 <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... write resumed>)              = 65
+6628  <... read resumed>"unshaken.\r\nBut she would not be "..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"\200\231d nothing for himself worth\r\n "..., 1024) = 1024
+6628  <... read resumed>"cle and aunt.\r\nIt was a painful,"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"Gather\342\200\231d to Sunday church in p"..., 1024) = 1024
+6628  <... read resumed>"ally, unable to resist the impul"..., 1024) = 1024
+6629  read(4,  <unfinished ...>
+6628  read(3,  <unfinished ...>
+6629  <... read resumed>"ee free and bear thee home,\r\n   "..., 1024) = 1024
+6628  <... read resumed>"e seen it in the papers.\r\nIt was"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"iends, though perhaps not so man"..., 1024) = 1024
+6629  <... read resumed>"inute then--but after in the sol"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"rst wish of my heart,\" said she "..., 1024) = 1024
+6629  <... read resumed>"s running,\r\n  The maple woods, t"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"gaged to dine at Longbourn in a "..., 1024) = 1024
+6629  <... read resumed>"ne, but for their atmosphere,\r\n "..., 1024) = 1024
+6628  write(1, "tests/pride-sentences.txt: 5018:"..., 66 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... write resumed>)              = 66
+6629  <... read resumed>"ne,\r\n  A happy painless mother b"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ished and vexed her.\"Why, if he "..., 1024) = 1024
+6629  <... read resumed>" shoeless shod, the orphan fathe"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"so weak, as to be in danger now?"..., 1024) = 1024
+6629  <... read resumed>"onate teeming plays this curtain"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"th noble indifference, and she w"..., 1024) = 1024
+6629  <... read resumed>"  Pausing, inclining, baring my "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"r they did.\r\nHer mother's ungrac"..., 1024) = 1024
+6629  <... read resumed>" all--none\r\n      refuse, all at"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 12513"..., 65 <unfinished ...>
+6628  <... read resumed>"re Miss Bennet was making tea, a"..., 1024) = 1024
+6629  <... write resumed>)              = 65
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ill?\"\r\n\"Yes, she will remain the"..., 1024) = 1024
+6629  <... read resumed>"\n\r\nTo Him That Was Crucified\r\n\r\n"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"designed to keep the two Netherf"..., 1024) = 1024
+6629  <... read resumed>"e eras,\r\n  Till we saturate time"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"rls, and not at all handsome: I "..., 1024) = 1024
+6629  <... read resumed>"am of them--I belong to those co"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"leasing, than any other man.\"\r\n\""..., 1024) = 1024
+6629  <... read resumed>"omposed--be at ease with me--I a"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"give him leave, would take an ea"..., 1024) = 1024
+6629  <... read resumed>"ne woman to-day--the average man"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"n the evening.\r\nAfter tea, Mr. B"..., 1024) = 1024
+6629  <... read resumed>"sad, hasty, unwaked sonnambules "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"hem by themselves you know;\" sai"..., 1024) = 1024
+6629  <... read resumed>"f the light and dark is a miracl"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 12706"..., 63 <unfinished ...>
+6628  <... read resumed>"ingley; but Elizabeth went to be"..., 1024) = 1024
+6629  <... write resumed>)              = 63
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"n returning to the drawing-room,"..., 1024) = 1024
+6629  <... read resumed>" broad\r\n      shoulder-band of l"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ot everybody as happy?\"\r\n Elizab"..., 1024) = 1024
+6629  <... read resumed>"mence to-day to\r\n      inure you"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"umspection!\r\nof all his sister's"..., 1024) = 1024
+6629  <... read resumed>" folds\r\n      of the man\342\200\231s bra"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" no common delight to them all; "..., 1024) = 1024
+6629  <... read resumed>"th messengers for nothing,\r\n  Wh"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" you so complying, that nothing "..., 1024) = 1024
+6629  <... read resumed>"phere of this river, also the\r\n "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" interest with her for objects o"..., 1024) = 1024
+6629  <... read resumed>"and ever, without one jolt or\r\n "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" totally ignorant of my being in"..., 1024) = 1024
+6629  <... read resumed>"ul.\r\n\r\n  And that I can think su"..., 1024) = 1024
+6628  write(1, "tests/pride-sentences.txt: 5225:"..., 56 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... write resumed>)              = 56
+6629  <... read resumed>" a dim shadowy thing, moves acro"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"\"\r\n This naturally introduced a "..., 1024) = 1024
+6629  <... read resumed>"aimedst highly,\r\n  In that thou "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"hout any permission, to do the s"..., 1024) = 1024
+6629  <... read resumed>"\r\n  Again thy star O France, fai"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"th set off, and the conjectures "..., 1024) = 1024
+6629  <... read resumed>" some are brindled,\r\n  Some have"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"lied very concisely that she was"..., 1024) = 1024
+6629  <... read resumed>"ral skies--O morning dew upon th"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"lling.\r\nBut no letter appeared, "..., 1024) = 1024
+6629  <... read resumed>"d divine!\r\n  Thee coil\342\200\231d in ev"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ed to the copse; Elizabeth was d"..., 1024) = 1024
+6629  <... read resumed>"rangely fitting even here, meani"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"old that not only your sister wa"..., 1024) = 1024
+6629  <... read resumed>" for thee--what if that gift of "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"broad?\"\r\n\"I never heard that it "..., 1024) = 1024
+6629  <... read resumed>"\n  Proud music of the storm,\r\n  "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"y understood.\r\nThis match, to wh"..., 1024) = 1024
+6629  <... read resumed>"ge-march,\r\n  With lips of love, "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" heard it before.\r\nBut what is t"..., 1024) = 1024
+6629  <... read resumed>"beauty, grace and strength, all "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" could, upon the whole, have no "..., 1024) = 1024
+6629  <... read resumed>"ith his wand.)\r\n\r\n  The manly st"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ensions of a young woman without"..., 1024) = 1024
+6629  <... read resumed>"ands come sounding round me,\r\n  "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"iss Bennet I am shocked and asto"..., 1024) = 1024
+6629  <... read resumed>"\n\r\n  Awaking from her woes at la"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"beg, therefore, to be importuned"..., 1024) = 1024
+6629  <... read resumed>"nces of the Persians and the Ara"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"h you must disgrace him in the e"..., 1024) = 1024
+6629  <... read resumed>"rgans huge and bands I hear as f"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"\r\n\"And this is your real opinion"..., 1024) = 1024
+6629  <... read resumed>"as and chants, marches and dance"..., 1024) = 1024
+6628  write(1, "tests/pride-sentences.txt: 5421:"..., 56 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... write resumed>)              = 56
+6629  <... read resumed>"yers\r\n      of harmonies,\r\n  Nor"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 13327"..., 56 <unfinished ...>
+6628  <... read resumed>"he only came, I suppose, to tell"..., 1024) = 1024
+6629  <... write resumed>)              = 56
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" one wedding made everybody eage"..., 1024) = 1024
+6629  <... read resumed>"the past?\r\n  (As a projectile fo"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 13364"..., 63 <unfinished ...>
+6628  <... read resumed>" thought much higher of her lady"..., 1024) = 1024
+6629  <... write resumed>)              = 63
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"is constancy.\r\nIf he is satisfie"..., 1024) = 1024
+6629  <... read resumed>"the first?\r\n  The earth to be sp"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"tter this morning that has aston"..., 1024) = 1024
+6629  <... read resumed>" winding along the Platte carryi"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ossiping Lucases.\r\nI shall not s"..., 1024) = 1024
+6629  <... read resumed>",\r\n  Bridging the three or four "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 13429"..., 63 <unfinished ...>
+6628  <... read resumed>" inclined to take immediate adva"..., 1024) = 1024
+6629  <... write resumed>)              = 63
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"t she felt on the occasion; when"..., 1024) = 1024
+6629  <... read resumed>"ace,\r\n  Cover\342\200\231d all over with "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"them in your sight, or allow the"..., 1024) = 1024
+6629  <... read resumed>"swer ours,\r\n  Cold earth, the pl"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"atherine about this report?\r\nDid"..., 1024) = 1024
+6629  <... read resumed>"son of God, the poet,\r\n  (He sha"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"to be alone with Jane, proposed "..., 1024) = 1024
+6629  <... read resumed>",\r\n  (I my shores of America wal"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ss to my poor sister.\r\nEver sinc"..., 1024) = 1024
+6629  <... read resumed>"sunset splendor of chivalry decl"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"t attempt to deny.\r\nBut your fam"..., 1024) = 1024
+6629  <... read resumed>"lands and seas alone, thy own cl"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"his eye, she might have seen how"..., 1024) = 1024
+6629  <... read resumed>"ailing these seas or on the hill"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" been exactly contrariwise.\"It t"..., 1024) = 1024
+6629  <... read resumed>"r universes?\r\n\r\n  Swiftly I shri"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"be so easily reconciled to mysel"..., 1024) = 1024
+6629  <... read resumed>"re than India!\r\n  Are thy wings "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"artily ashamed of it.\"\r\n Darcy m"..., 1024) = 1024
+6629  <... read resumed>" stood here like trees in the gr"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>", began in bitterness, but it di"..., 1024) = 1024
+6629  <... read resumed>" Till I put forth myself, my pra"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"only child), I was spoilt by my "..., 1024) = 1024
+6629  <... read resumed>"querable will,\r\n  The potent, fe"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ive you, but my spirits might of"..., 1024) = 1024
+6629  <... read resumed>"od, be it my latest word, here o"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"nt at its sudden interruption; w"..., 1024) = 1024
+6629  <... read resumed>"VIII\r\n\r\n\r\nThe Sleepers\r\n\r\n      "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"And though he exclaimed at the t"..., 1024) = 1024
+6629  <... read resumed>"men sleep lovingly side by side "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" suppose, carried immediate conv"..., 1024) = 1024
+6629  <... read resumed>"sleepers\r\n      each in turn,\r\n "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"house.\r\nIn the hall they parted."..., 1024) = 1024
+6629  <... read resumed>"ous and he who shall be famous a"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"his fortune and consequence migh"..., 1024) = 1024
+6629  <... read resumed>"erfume and youth course through "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" now I must believe you,\" cried "..., 1024) = 1024
+6629  <... read resumed>" head-foremost on\r\n      the roc"..., 1024) = 1024
+6628  write(1, "tests/pride-sentences.txt: 5695:"..., 63 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... write resumed>)              = 63
+6629  <... read resumed>"ers,\r\n  I can but rush to the su"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" tell me how long you have loved"..., 1024) = 1024
+6629  <... read resumed>"  and bids good-by to the army.\r"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ad made her equally avoid the na"..., 1024) = 1024
+6629  <... read resumed>" of the\r\n      afternoon she wen"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" lose her way again to-day?\"\r\n\"I"..., 1024) = 1024
+6629  <... read resumed>"come him, he is barefoot again, "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"how her mother would take it; so"..., 1024) = 1024
+6629  <... read resumed>" him, the fluent lawyers, the ju"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"pproached the table where she wa"..., 1024) = 1024
+6629  <... read resumed>"wn proportion\342\200\231d and plumb, and"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"rt of man; but this would be not"..., 1024) = 1024
+6629  <... read resumed>"female are hand\r\n      in hand,\r"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"d, was earnest and solemn in her"..., 1024) = 1024
+6629  <... read resumed>"as ever, and smoother\r\n      tha"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 14042"..., 63 <unfinished ...>
+6628  <... read resumed>" your uncle's doing, I must and "..., 1024) = 1024
+6629  <... write resumed>)              = 63
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" extraordinary; for on first hea"..., 1024) = 1024
+6629  <... read resumed>"sed--let the prison-keepers be\r\n"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 14074"..., 56 <unfinished ...>
+6628  <... read resumed>"rd!\r\nWhat will become of me.\r\nI "..., 1024) = 1024
+6629  <... write resumed>)              = 56
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"m, unless it was in her power to"..., 1024) = 1024
+6629  <... read resumed>"l days also,\r\n  The soreness of "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"nd I never spoke to you without "..., 1024) = 1024
+6629  <... read resumed>"\r\n\r\n  To think how eager we are "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ectionate behaviour to Jane whil"..., 1024) = 1024
+6629  <... read resumed>"w-dug grave is halted at, the li"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"wonder when you would have spoke"..., 1024) = 1024
+6629  <... read resumed>"k, first out,\r\n      last out, t"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"o see you, and to judge, if I co"..., 1024) = 1024
+6629  <... read resumed>"terest in them.\r\n\r\n  Your farm, "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ess, and immediately wrote as fo"..., 1024) = 1024
+6629  <... read resumed>" be decided,\r\n  Something long p"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"berley at Christmas.\r\nYours, etc"..., 1024) = 1024
+6629  <... read resumed>" Northerner goes carried and Sou"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>", and all her earnest desire of "..., 1024) = 1024
+6629  <... read resumed>" the law they are under now is e"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"e.\r\nIf he did shrug his shoulder"..., 1024) = 1024
+6629  <... read resumed>"s, and slowly and surely\r\n      "..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"appy for all her maternal feelin"..., 1024) = 1024
+6629  <... read resumed>"e ties loosen,\r\n  All but the ti"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" affectionate heart.\r\nThe darlin"..., 1024) = 1024
+6629  <... read resumed>"ng the square deific, out of the"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>" sit alone.\r\nMary was obliged to"..., 1024) = 1024
+6629  <... read resumed>"their most rapt prophecies and p"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  write(1, "tests/leaves-of-grass.txt: 14383"..., 65 <unfinished ...>
+6628  <... read resumed>"u so rich, and when you have not"..., 1024) = 1024
+6629  <... write resumed>)              = 65
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"ls.\r\nTheir manner of living, eve"..., 1024) = 1024
+6629  <... read resumed>"ty, despised, a drudge, ignorant"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"than ever of Georgiana, almost a"..., 1024) = 1024
+6629  <... read resumed>"f the real identities, permanent"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"er in her reply to the letter wh"..., 1024) = 947
+6629  <... read resumed>"\r\n  And now I am willing to disr"..., 1024) = 1024
+6628  read(3,  <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... read resumed>"", 1024)       = 0
+6629  <... read resumed>"ear, behold, the sad mouth, the "..., 1024) = 1024
+6628  close(3 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... close resumed>)              = 0
+6629  <... read resumed>"a of the world,\r\n  I do not doub"..., 1024) = 1024
+6628  exit_group(23 <unfinished ...>
+6629  read(4,  <unfinished ...>
+6628  <... exit_group resumed>)         = ?
+6629  <... read resumed>"ild, husband, father, lover, has"..., 1024) = 1024
+6628  +++ exited with 23 +++
+6629  read(4,  <unfinished ...>
+6627  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 23}], 0, NULL) = 6628
+6629  <... read resumed>"ealth, with glad notes of\r\n     "..., 1024) = 1024
+6627  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=6628, si_uid=1000, si_status=23, si_utime=0, si_stime=0} ---
+6629  write(1, "tests/leaves-of-grass.txt: 14552"..., 65 <unfinished ...>
+6627  wait4(-1,  <unfinished ...>
+6629  <... write resumed>)              = 65
+6629  read(4, " I mark\342\200\231d where on a little pr"..., 1024) = 1024
+6629  read(4, "\r\n\r\n  From all the rest I single"..., 1024) = 1024
+6629  read(4, "on the prairies,\r\n  The supper i"..., 1024) = 1024
+6629  read(4, ", or waiting to arrive.\r\n\r\n  O I"..., 1024) = 1024
+6629  read(4, " indeed gone?\r\n  Are souls drown"..., 1024) = 1024
+6629  read(4, "I\r\n\r\n\r\nThou Mother with Thy Equa"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 14710"..., 56) = 56
+6629  read(4, "eir turn so long,\r\n  Nor rhyme, "..., 1024) = 1024
+6629  read(4, " thy reality, lo, the immortal i"..., 1024) = 1024
+6629  read(4, "est, ship of Democracy,\r\n  Of va"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 14789"..., 68) = 68
+6629  read(4, " giant babes in ceaseless proces"..., 1024) = 1024
+6629  read(4, "  I but thee name, thee prophesy"..., 1024) = 1024
+6629  read(4, "n no single\r\n      bible, saviou"..., 1024) = 1024
+6629  read(4, " good\r\n      for thee,\r\n  Land i"..., 1024) = 1024
+6629  read(4, " claws, clinging upon thy\r\n     "..., 1024) = 1024
+6629  read(4, "holds thee not--for such vast gr"..., 1024) = 1024
+6629  read(4, "the gray beach sand,\r\n  The sibi"..., 1024) = 1024
+6629  read(4, "hat turns its face to thee shini"..., 1024) = 1024
+6629  read(4, "gly face of some beautiful soul,"..., 1024) = 1024
+6629  read(4, "ace is a haze more chill than th"..., 1024) = 1024
+6629  read(4, " disguises.\r\n\r\n  Splay and twist"..., 1024) = 1024
+6629  read(4, "ady for eating,\r\n  This face of "..., 1024) = 1024
+6629  read(4, "s low over the rows of trees by "..., 1024) = 1024
+6629  read(4, "stening alert I catch thy notes,"..., 1024) = 1024
+6629  read(4, "us eyes,\r\n  Bring the old pagean"..., 1024) = 1024
+6629  read(4, "e flames that\r\n      heat the wo"..., 1024) = 1024
+6629  read(4, "bleaus.\r\n\r\n       7\r\n  O trumpet"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 15180"..., 71) = 71
+6629  write(1, "tests/leaves-of-grass.txt: 15189"..., 65) = 65
+6629  read(4, "e than earth\342\200\231s is in thy notes"..., 1024) = 1024
+6629  read(4, "ring in the distance,\r\n  Thy gre"..., 1024) = 1024
+6629  read(4, "tness debonair of tearful harp o"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 15270"..., 65) = 65
+6629  read(4, "arrots in the woods, I see the p"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 15280"..., 71) = 71
+6629  read(4, "e sad noises of the night-owl an"..., 1024) = 1024
+6629  read(4, "r-bays, superb,\r\n  Rich, hemm\342\200\231"..., 1024) = 1024
+6629  read(4, "up or down with the flood-tide o"..., 1024) = 1024
+6629  read(4, "e does.)\r\n\r\n  Where has fail\342\200\231d"..., 1024) = 1024
+6629  read(4, "ery heart and life throughout th"..., 1024) = 1024
+6629  read(4, "ny ships have sail\342\200\231d and sunk "..., 1024) = 1024
+6629  read(4, " And who has been happiest? O I "..., 1024) = 1024
+6629  read(4, " poverties, wincings, and sulky "..., 1024) = 1024
+6629  read(4, "upt Congressman, Governor,\r\n    "..., 1024) = 1024
+6629  read(4, "\n  They shall fully enjoy materi"..., 1024) = 1024
+6629  read(4, "or know the aim, the end, nor\r\n "..., 1024) = 1024
+6629  read(4, "waitest there as everywhere thy "..., 1024) = 1024
+6629  read(4, "or heroes.\r\n\r\n  The battle-bulle"..., 1024) = 1024
+6629  read(4, "no dirge for it or thee, I bring"..., 1024) = 1024
+6629  read(4, " dream, I dream.\r\n\r\n\r\n\r\n\r\nThick-"..., 1024) = 1024
+6629  read(4, "th even pace the round world\342\200\231s"..., 1024) = 1024
+6629  read(4, "lish\342\200\231d arch forgot?\r\n  But tho"..., 1024) = 1024
+6629  read(4, "c of distant bugles pouring,\r\n  "..., 1024) = 1024
+6629  read(4, "ong,\r\n  Perhaps soon some day or"..., 1024) = 1024
+6629  read(4, "ouements are these we so rapidly"..., 1024) = 1024
+6629  read(4, "m,\r\n  The earth, restive, confro"..., 1024) = 1024
+6629  read(4, "  From every point of the compas"..., 1024) = 1024
+6629  read(4, "r, gather closer yet,\r\n  Draw cl"..., 1024) = 1024
+6629  read(4, "s\r\n\r\n       1\r\n  Of these years "..., 1024) = 1024
+6629  read(4, " a while between things ended\r\n "..., 1024) = 1024
+6629  read(4, "     and the rest,\r\n  (Or afar, "..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 15922"..., 65) = 65
+6629  read(4, "e for that area,)\r\n  Of the nati"..., 1024) = 1024
+6629  read(4, "nimals,\r\n  In the annual return "..., 1024) = 1024
+6629  read(4, "ing more in each of the trees, s"..., 1024) = 1024
+6629  read(4, "ve charged myself with contentme"..., 1024) = 1024
+6629  read(4, "he best,\r\n  I grave a monumental"..., 1024) = 1024
+6629  read(4, " she call\342\200\231d to her earth with "..., 1024) = 1024
+6629  read(4, "aves! O air and soil! O my dead,"..., 1024) = 1024
+6629  read(4, " night and sleep pass over?)\r\n\r\n"..., 1024) = 1024
+6629  read(4, "in their breasts, their brains, "..., 1024) = 1024
+6629  read(4, "pmate, Joy!\r\n\r\n  Joy, shipmate, "..., 1024) = 1024
+6629  read(4, "ish,\r\n  Embrace thy friends, lea"..., 1024) = 1024
+6629  read(4, "and and the young man\342\200\231s hand f"..., 1024) = 1024
+6629  read(4, "et-blooded,\r\n  I announce a race"..., 1024) = 1024
+6629  read(4, " contrary,\r\n  Afterward a melodi"..., 1024) = 1024
+6629  read(4, " you, do not forget me,\r\n  I fee"..., 1024) = 1024
+6629  read(4, "and soil!\r\n  Isle of the salty s"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 16359"..., 65) = 65
+6629  read(4, "e, Nature, Freedom, Poetry;\r\n  O"..., 1024) = 1024
+6629  read(4, "slumbering.\r\n\r\n\r\n\r\n\r\nAs I Sit Wr"..., 1024) = 1024
+6629  read(4, "f Achilles or Ulysses,\r\n  More, "..., 1024) = 1024
+6629  read(4, "ed\r\n      --their loves, joys, p"..., 1024) = 1024
+6629  read(4, "early morning;\r\n  The yellow, go"..., 1024) = 1024
+6629  read(4, "e trembling, laboring vessel vee"..., 1024) = 1024
+6629  read(4, ", earth, and all the constellati"..., 1024) = 1024
+6629  read(4, "\n\r\n  On to oblivion then!\r\n  On,"..., 1024) = 1024
+6629  read(4, " a spar the flag I love.\r\n\r\n\r\n\r\n"..., 1024) = 1024
+6629  read(4, "name, O Western World, your powe"..., 1024) = 1024
+6629  read(4, "r ill humanity--welcoming the da"..., 1024) = 1024
+6629  read(4, ", yet\r\n      never gain\342\200\231st,\r\n "..., 1024) = 1024
+6629  read(4, "ves receding, mellowing,\r\n  Vict"..., 1024) = 1024
+6629  read(4, "rld\342\200\231s, the continents\342\200\231 entir"..., 1024) = 1024
+6629  read(4, " too welcome chilling drifts,\r\n "..., 1024) = 1024
+6629  read(4, "sliding, mincing, shuffling feet"..., 1024) = 1024
+6629  read(4, ",\r\n  In his great arm chair by t"..., 1024) = 1024
+6629  read(4, "all to me the lesson--trial\r\n   "..., 1024) = 1024
+6629  read(4, "w low in the west rises for morn"..., 1024) = 1024
+6629  read(4, "\r\n\r\n\r\nLife\r\n\r\n  Ever the undisco"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 16923"..., 64) = 64
+6629  read(4, " is befitting each--all surely g"..., 1024) = 1024
+6629  read(4, "voyage, storm and wreck,\r\n  Old "..., 1024) = 1024
+6629  read(4, "he impalpable air--for life, mer"..., 1024) = 1024
+6629  read(4, "ds,\r\n      to the long processio"..., 1024) = 1024
+6629  read(4, " Reck\342\200\231d or unreck\342\200\231d, duly wi"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 17053"..., 71) = 71
+6629  read(4, "erhood uprisen;\r\n  For sign reci"..., 1024) = 1024
+6629  read(4, "lery,\r\n  To the galloping aides,"..., 1024) = 1024
+6629  read(4, "\r\nTwenty Years\r\n\r\n  Down on the "..., 1024) = 1024
+6629  read(4, "\200\231s, yet greater,\r\n  Proof of th"..., 1024) = 1024
+6629  read(4, "\nNot Meagre, Latent Boughs Alone"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 17179"..., 71) = 71
+6629  read(4, "fringed shore,\r\n  Lift high a ki"..., 1024) = 1024
+6629  read(4, " pulsing blood,\r\n  The personal "..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 17237"..., 62) = 62
+6629  read(4, "ts of view, the situations whenc"..., 1024) = 1024
+6629  read(4, "us to the very last.\r\n\r\n\r\n\r\n\r\nBO"..., 1024) = 1024
+6629  read(4, "en its proper place arrives--and"..., 1024) = 1024
+6629  read(4, "er\342\200\231s,\r\n      autumn\342\200\231s spread"..., 1024) = 1024
+6629  read(4, "\r\n  Somehow I cannot let it go y"..., 1024) = 1024
+6629  read(4, "le-contest yet! bear\r\n      live"..., 1024) = 1024
+6629  read(4, "ar--in every birth and life,\r\n  "..., 1024) = 1024
+6629  read(4, "n, bending priests,\r\n  To me com"..., 1024) = 1024
+6629  read(4, "re! elements! utterance to my he"..., 1024) = 1024
+6629  read(4, "hemes fitted for thee,\r\n  Accept"..., 1024) = 1024
+6629  read(4, " courteous hand\r\n      and word,"..., 1024) = 1024
+6629  read(4, "in--from nearer field, barn, hou"..., 1024) = 1024
+6629  read(4, "ain I see the stalwart ranks on-"..., 1024) = 1024
+6629  read(4, " will never release until he rec"..., 1024) = 1024
+6629  read(4, "dwellings, forge, street, iron b"..., 1024) = 1024
+6629  read(4, ",\r\n  Silent, resign\342\200\231d, submiss"..., 1024) = 1024
+6629  read(4, "  Have lost my recognition of yo"..., 1024) = 1024
+6629  read(4, "very atom,\r\n  (Often unconscious"..., 1024) = 1024
+6629  read(4, " orbic scheme?)\r\n  Newts, crawli"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 17772"..., 65) = 65
+6629  read(4, "f sorrow or joy,\r\n  (I could pic"..., 1024) = 1024
+6629  read(4, "les, poems, singers, plays,\r\n  V"..., 1024) = 1024
+6629  write(1, "tests/leaves-of-grass.txt: 17837"..., 61) = 61
+6629  read(4, " indeed, without thee, unseen so"..., 1024) = 1024
+6629  read(4, "on the heart-thud stopping.\r\n\r\n "..., 1024) = 1024
+6629  read(4, "and distribute it in the United\r"..., 1024) = 1024
+6629  read(4, "on.\r\n\r\n\r\nSTART: FULL LICENSE\r\n\r\n"..., 1024) = 1024
+6629  read(4, " a fee for obtaining a copy of o"..., 1024) = 1024
+6629  read(4, "\242 electronic works. Nearly all t"..., 1024) = 1024
+6629  read(4, "opyright laws in most countries "..., 1024) = 1024
+6629  read(4, "r parts of the world at no cost "..., 1024) = 1024
+6629  read(4, "rk as set forth in paragraphs 1."..., 1024) = 1024
+6629  read(4, " this work in any binary,\r\ncompr"..., 1024) = 1024
+6629  read(4, "lectronic works\r\nprovided that:\r"..., 1024) = 1024
+6629  read(4, "30 days of receipt that s/he\r\n  "..., 1024) = 1024
+6629  read(4, "ct Gutenberg\342\204\242 trademark. Conta"..., 1024) = 1024
+6629  read(4, "ct\r\nGutenberg\342\204\242 electronic work"..., 1024) = 1024
+6629  read(4, "placement copy in\r\nlieu of a ref"..., 1024) = 1024
+6629  read(4, "y or\r\nunenforceability of any pr"..., 1024) = 1024
+6629  read(4, "obsolete, old, middle-aged and n"..., 1024) = 1024
+6629  read(4, "x exempt status by the Internal\r"..., 1024) = 1024
+6629  read(4, "y important to maintaining tax e"..., 1024) = 1024
+6629  read(4, "all staff.\r\n\r\nPlease check the P"..., 1024) = 1024
+6629  read(4, "udes information about Project G"..., 1024) = 246
+6629  read(4, "", 1024)                 = 0
+6629  close(4)                          = 0
+6629  exit_group(98)                    = ?
+6629  +++ exited with 98 +++
+6627  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 98}], 0, NULL) = 6629
+6627  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=6629, si_uid=1000, si_status=98, si_utime=0, si_stime=0} ---
+6627  newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+6627  write(1, "3 children finished. Total 127 l"..., 43) = 43
+6627  exit_group(0)                     = ?
+6627  +++ exited with 0 +++
+

@@ -1,0 +1,592 @@
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: make all
+      id: make-all
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: make all
+        setup-command: ''
+        command: make all
+        timeout: 2
+        max-score: 3
+    - name: make uniform-length
+      id: make-uniform-length
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: make uniform-length
+        setup-command: ''
+        command: make uniform-length
+        timeout: 2
+        max-score: 3
+    - name: make debug
+      id: make-debug
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: make debug
+        setup-command: ''
+        command: make debug
+        timeout: 2
+        max-score: 1
+    - name: make clean
+      id: make-clean
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: make clean
+        setup-command: ''
+        command: make clean
+        timeout: 2
+        max-score: 3
+    - name: STDIN one one one
+      id: stdin-one-one-one
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: STDIN one one one
+        setup-command: make
+        command: echo one one one | ./uniform-length
+        input: ''
+        expected-output: STDIN:\s+1:\s+length\s+3:\s+one one one\s+1 children finished.\s+Total\s+1\s+lines
+          found
+        comparison-method: regex
+        timeout: 2
+        max-score: 5
+    - name: STDIN hello there one one one one two one three
+      id: stdin-hello-there-one-one-one-one-two-one-three
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: STDIN hello there one one one one two one three
+        setup-command: ''
+        command: "./uniform-length < ./tests/stdin-hello-there-one-one-one-one-two-one-three"
+        input: ''
+        expected-output: STDIN:\s+1:\s+length\s+5:\s+hello there\s+STDIN:\s+2:\s+length\s+3:\s+one
+          one one one\s+1\s+children finished.\s+Total\s+2\s+lines found
+        comparison-method: regex
+        timeout: 2
+        max-score: 5
+    - name: 'STDIN Hello there world Another123 several: :: "659jumping Jury Kylls
+        Losing money bonkers'
+      id: stdin-hello-there-world-another123-several-659jumping-jury-kylls-losing-money-bonkers
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'STDIN Hello there world Another123 several: :: "659jumping Jury
+          Kylls Losing money bonkers'
+        setup-command: ''
+        command: "./uniform-length < ./tests/hello-there-world-another123-several-jumping-jury-kylls-losing-money-bonkers"
+        input: ''
+        expected-output: 'STDIN:\s+1:\s+length\s+5:\s+Hello there world\s+STDIN:\s+2:\s+length\s+7:\s+Another123
+          several: :: "659jumping\s+1\s+children finished.\s+Total\s+2 lines found'
+        comparison-method: regex
+        timeout: 2
+        max-score: 5
+    - name: 'One Input File: one-line-test.txt'
+      id: one-input-file-one-line-test-txt
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'One Input File: one-line-test.txt'
+        setup-command: ''
+        command: "./uniform-length ./tests/one-line-test.txt"
+        input: ''
+        expected-output: 1\s+children finished.\s+Total\s+0\s+lines found
+        comparison-method: regex
+        timeout: 2
+        max-score: 5
+    - name: 'One Input File: two-line-tests.txt'
+      id: one-input-file-two-line-tests-txt
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'One Input File: two-line-tests.txt'
+        setup-command: ''
+        command: "./uniform-length ./tests/two-line-tests.txt"
+        input: ''
+        expected-output: two-line-tests.txt:\s+1:\s+length\s+3:\s+one one one\s+1
+          children finished.\s+Total\s+1\s+lines found
+        comparison-method: regex
+        timeout: 2
+        max-score: 5
+    - name: 'One Input File: simple-tests.txt'
+      id: one-input-file-simple-tests-txt
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'One Input File: simple-tests.txt'
+        setup-command: ''
+        command: "./uniform-length ./tests/simple-tests.txt"
+        input: ''
+        expected-output: '.\/tests\/simple-tests.txt:\s+3:\s+length\s+5:\s+third lines\s+.\/tests\/simple-tests.txt:\s+4:\s+length\s+6:\s+"fourth
+          horses\s+.\/tests\/simple-tests.txt:\s+5:\s+length\s+5:\s+12345fifth hors678e\s+.\/tests\/simple-tests.txt:\s+6:\s+length\s+5:\s+sixth!
+          "thing"\s+.\/tests\/simple-tests.txt:\s+7:\s+length\s+5:\s+seven: fives\s+.\/tests\/simple-tests.txt:\s+8:\s+length\s+5:\s+eight
+          sixes: eight eight\s+.\/tests\/simple-tests.txt:\s+9:\s+length\s+7:\s+Serious
+          beetles invited cricket thither dinners\s+.\/tests\/simple-tests.txt:\s+10:\s+length\s+5:\s+\s+Grace
+          found happy music under dusty, brown stair.\s+.\/tests\/simple-tests.txt:\s+11:\s+length\s+5:\s+Amber
+          Bliss Chime Drake Ember Flute Grasp Haste Inlet Joust Knife Latch Mirth
+          Nudge Olive Prism Quota Ruler Shade Tramp Utter Vowel Whale Xerox Yacht
+          Zebra Crisp Diver Evoke Fable Glide Horde Inlay Jumbo Knack Ledge Magma
+          Nifty Ozone Pixel Quiet Rival Swift Twist Unzip Vixen Woven Xylon Yodel
+          Zesty Ample Bliss Crave Drown Eject Flair Grind Haunt Inset Jolly Karma
+          Latch Mango Nylon Orbit Pique Quirk Rouse Savor Tulip Unify Velum Wrist
+          Xanax Yacht Zippy Crisp Douse Ember Fable Greet Happy Input Joust Knoll
+          Livid Mirth Niche Ozone Prawn Quest Rides Snack Twine Unbox Veiny Waxed
+          Yodel Zebra Cruxs\s+.\/tests\/simple-tests.txt:\s+14:\s+length\s+8:\s+fourteen
+          14 fifteens\s+1 children finished.\s+Total\s+10\s+lines found'
+        comparison-method: regex
+        timeout: 2
+        max-score: 5
+    - name: 'One Input File: pride-sentences.txt'
+      id: one-input-file-pride-sentences-txt
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'One Input File: pride-sentences.txt'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt"
+        input: ''
+        expected-output: .\/tests\/pride-sentences.txt:\s+206:\s+length\s+3:\s+"Did
+          not you\?\s+.\/tests\/pride-sentences.txt:\s+458:\s+length\s+5:\s+cried
+          Lydia.\s+.\/tests\/pride-sentences.txt:\s+462:\s+length\s+4:\s+said Jane.\s+.\/tests\/pride-sentences.txt:\s+1013:\s+length\s+7:\s+"WILLIAM
+          COLLINS"\s+.\/tests\/pride-sentences.txt:\s+1369:\s+length\s+6:\s+"Heaven
+          forbid!\s+.\/tests\/pride-sentences.txt:\s+1380:\s+length\s+4:\s+"Very well.\s+.\/tests\/pride-sentences.txt:\s+1669:\s+length\s+4:\s+"Very
+          well.\s+.\/tests\/pride-sentences.txt:\s+1876:\s+length\s+4:\s+"Good Lord!\s+.\/tests\/pride-sentences.txt:\s+2081:\s+length\s+4:\s+Poor
+          Jane!\s+.\/tests\/pride-sentences.txt:\s+2430:\s+length\s+3:\s+"Not one."\s+.\/tests\/pride-sentences.txt:\s+3267:\s+length\s+2:\s+Oh,
+          no."\s+.\/tests\/pride-sentences.txt:\s+3358:\s+length\s+3:\s+Yes, yes.\s+.\/tests\/pride-sentences.txt:\s+4128:\s+length\s+3:\s+How
+          are you all\?"\s+.\/tests\/pride-sentences.txt:\s+4430:\s+length\s+6:\s+Heaven
+          forbid!\s+.\/tests\/pride-sentences.txt:\s+4603:\s+length\s+4:\s+They came.\s+.\/tests\/pride-sentences.txt:\s+4820:\s+length\s+3:\s+"Yes,
+          she did."\s+.\/tests\/pride-sentences.txt:\s+4836:\s+length\s+4:\s+"Very
+          much."\s+.\/tests\/pride-sentences.txt:\s+4859:\s+length\s+3:\s+"You did!\s+.\/tests\/pride-sentences.txt:\s+4921:\s+length\s+2:\s+"No,
+          no.\s+.\/tests\/pride-sentences.txt:\s+5018:\s+length\s+4:\s+They then went
+          away.\s+.\/tests\/pride-sentences.txt:\s+5225:\s+length\s+4:\s+Good girl!\s+.\/tests\/pride-sentences.txt:\s+5421:\s+length\s+4:\s+Very
+          well.\s+.\/tests\/pride-sentences.txt:\s+5695:\s+length\s+4:\s+"Very, very
+          much.\s+1\s+children finished.\s+Total\s+23\s+lines found
+        comparison-method: regex
+        timeout: 2
+        max-score: 5
+    - name: 'Two Input Files: pride-sentences.txt paradise-lost.txt 206'
+      id: two-input-files-pride-sentences-txt-paradise-lost-txt-206
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: pride-sentences.txt paradise-lost.txt 206'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt"
+        input: ''
+        expected-output: .\/tests\/pride-sentences.txt:\s+206:\s+length\s+3:\s+"Did
+          not you?
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Two Input Files: pride-sentences.txt paradise-lost.txt 5695'
+      id: two-input-files-pride-sentences-txt-paradise-lost-txt-5695
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: pride-sentences.txt paradise-lost.txt 5695'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt"
+        input: ''
+        expected-output: .\/tests\/pride-sentences.txt:\s+5695:\s+length\s+4:\s+"Very,
+          very much.
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Two Input Files: pride-sentences.txt paradise-lost.txt 58'
+      id: two-input-files-pride-sentences-txt-paradise-lost-txt-58
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: pride-sentences.txt paradise-lost.txt 58'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt"
+        input: ''
+        expected-output: ".\\/tests\\/paradise-lost.txt:\\s+58:\\s+length\\s+4:\\s+BOOK
+          VIII"
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Two Input Files: pride-sentences.txt paradise-lost.txt 11070'
+      id: two-input-files-pride-sentences-txt-paradise-lost-txt-11070
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: pride-sentences.txt paradise-lost.txt 11070'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt"
+        input: ''
+        expected-output: ".\\/tests\\/paradise-lost.txt:\\s+11070:\\s+length\\s+3:\\s+THE
+          END."
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Two Input Files: pride-sentences.txt paradise-lost.txt complete'
+      id: two-input-files-pride-sentences-txt-paradise-lost-txt-complete
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: pride-sentences.txt paradise-lost.txt complete'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt"
+        input: ''
+        expected-output: 2\s+children finished.\s+Total\s+26\s+lines found
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Two Input Files: two-line-tests.txt simple-tests.txt 1'
+      id: two-input-files-two-line-tests-txt-simple-tests-txt-1
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: two-line-tests.txt simple-tests.txt 1'
+        setup-command: ''
+        command: "./uniform-length ./tests/two-line-tests.txt ./tests/simple-tests.txt"
+        input: ''
+        expected-output: ".\\/tests\\/two-line-tests.txt:\\s+1:\\s+length\\s+3:\\s+one
+          one one"
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Two Input Files: two-line-tests.txt simple-tests.txt 3'
+      id: two-input-files-two-line-tests-txt-simple-tests-txt-3
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: two-line-tests.txt simple-tests.txt 3'
+        setup-command: ''
+        command: "./uniform-length ./tests/two-line-tests.txt ./tests/simple-tests.txt"
+        input: ''
+        expected-output: ".\\/tests\\/simple-tests.txt:\\s+3:\\s+length\\s+5:\\s+third
+          lines"
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Two Input Files: two-line-tests.txt simple-tests.txt 4'
+      id: two-input-files-two-line-tests-txt-simple-tests-txt-4
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: two-line-tests.txt simple-tests.txt 4'
+        setup-command: ''
+        command: "./uniform-length ./tests/two-line-tests.txt ./tests/simple-tests.txt"
+        input: ''
+        expected-output: .\/tests\/simple-tests.txt:\s+4:\s+length\s+6:\s+"fourth
+          horses
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Two Input Files: two-line-tests.txt simple-tests.txt 6'
+      id: two-input-files-two-line-tests-txt-simple-tests-txt-6
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: two-line-tests.txt simple-tests.txt 6'
+        setup-command: ''
+        command: "./uniform-length ./tests/two-line-tests.txt ./tests/simple-tests.txt"
+        input: ''
+        expected-output: .\/tests\/simple-tests.txt:\s+6:\s+length\s+5:\s+sixth! "thing"
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Two Input Files: two-line-tests.txt simple-tests.txt complete'
+      id: two-input-files-two-line-tests-txt-simple-tests-txt-complete
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: two-line-tests.txt simple-tests.txt complete'
+        setup-command: ''
+        command: "./uniform-length ./tests/two-line-tests.txt ./tests/simple-tests.txt"
+        input: ''
+        expected-output: 2\s+children finished.\s+Total\s+11\s+lines found
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Two Input Files: two-line-tests.txt file-doesnt-exist'
+      id: two-input-files-two-line-tests-txt-file-doesnt-exist
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Two Input Files: two-line-tests.txt file-doesnt-exist'
+        setup-command: ''
+        command: "./uniform-length ./tests/two-line-tests.txt file-doesnt-exist"
+        input: ''
+        expected-output: ".\\/tests\\/two-line-tests.txt:\\s+1:\\s+length\\s+3:\\s+one
+          one one\\s+1\\s+children finished.\\s+Total\\s+1\\s+lines found"
+        comparison-method: regex
+        timeout: 2
+        max-score: 5
+    - name: 'Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt
+        4128'
+      id: three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-4128
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt
+          4128'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt
+          ./tests/simple-tests.txt"
+        input: ''
+        expected-output: .\/tests\/pride-sentences.txt:\s+4128:\s+length\s+3:\s+How
+          are you all\?"
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt
+        5695'
+      id: three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-5695
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt
+          5695'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt
+          ./tests/simple-tests.txt"
+        input: ''
+        expected-output: .\/tests\/pride-sentences.txt:\s+5695:\s+length\s+4:\s+"Very,
+          very much.
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt
+        1'
+      id: three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-1
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt
+          1'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt
+          ./tests/simple-tests.txt"
+        input: ''
+        expected-output: ".\\/tests\\/two-line-tests.txt:\\s+\\s+1:\\s+length\\s+3:\\s+one
+          one one"
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt
+        14'
+      id: three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-14
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt
+          14'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt
+          ./tests/simple-tests.txt"
+        input: ''
+        expected-output: ".\\/tests\\/simple-tests.txt:\\s+\\s+14:\\s+length\\s+8:\\s+fourteen
+          14 fifteens"
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt
+        complete'
+      id: three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-complete
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt
+          complete'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt
+          ./tests/simple-tests.txt"
+        input: ''
+        expected-output: 3\s+children finished.\s+Total\s+34\s+lines found
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt
+        jekyll-hyde-sentences.txt 4820'
+      id: four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-4820
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt
+          jekyll-hyde-sentences.txt 4820'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt
+          ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt"
+        input: ''
+        expected-output: .\/tests\/pride-sentences.txt:\s+4820:\s+length\s+3:\s+"Yes,
+          she did."
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt
+        jekyll-hyde-sentences.txt 7063'
+      id: four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-7063
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt
+          jekyll-hyde-sentences.txt 7063'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt
+          ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt"
+        input: ''
+        expected-output: ".\\/tests\\/paradise-lost.txt:\\s+7063:\\s+length\\s+4:\\s+BOOK
+          VIII."
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt
+        jekyll-hyde-sentences.txt 5414'
+      id: four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-5414
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt
+          jekyll-hyde-sentences.txt 5414'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt
+          ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt"
+        input: ''
+        expected-output: ".\\/tests\\/leaves-of-grass.txt:\\s+5414:\\s+length\\s+9:\\s+mast-hemm’d
+          Manhattan\\?"
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt
+        jekyll-hyde-sentences.txt 1068'
+      id: four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-1068
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt
+          jekyll-hyde-sentences.txt 1068'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt
+          ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt"
+        input: ''
+        expected-output: ".\\/tests\\/jekyll-hyde-sentences.txt:\\s+1068:\\s+length\\s+6:\\s+HASTIE
+          LANYON"
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: 'Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt
+        jekyll-hyde-sentences.txt completed'
+      id: four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-completed
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: 'Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt
+          jekyll-hyde-sentences.txt completed'
+        setup-command: ''
+        command: "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt
+          ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt"
+        input: ''
+        expected-output: 4\s+children finished.\s+Total\s+130\s+lines found
+        comparison-method: regex
+        timeout: 2
+        max-score: 1
+    - name: strace uniform length file exists
+      id: strace-uniform-length-file-exists
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: strace uniform length file exists
+        setup-command: ''
+        command: stat strace-uniform-length
+        input: ''
+        expected-output: File:\s+strace-uniform-length\s+Size:\s+\d+\s+Blocks:\s+\d+\s+IO
+          Block:\s+\d+\s+regular file
+        comparison-method: regex
+        timeout: 1
+    - name: ltrace uniform length summary table file exists
+      id: ltrace-uniform-length-summary-table-file-exists
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: ltrace uniform length summary table file exists
+        setup-command: ''
+        command: stat ltrace-uniform-length-summary-table
+        input: ''
+        expected-output: File:\s+ltrace-uniform-length-summary-table\s+Size:\s+\d+\s+Blocks:\s+\d+\s+IO
+          Block:\s+\d+\s+regular file
+        comparison-method: regex
+        timeout: 1
+    - name: ensure fork is used
+      id: ensure-fork-is-used
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: ensure fork is used
+        setup-command: ''
+        command: grep fork main.c
+        input: ''
+        expected-output: fork()
+        comparison-method: contains
+        timeout: 1
+        max-score: 0
+    - name: test wait is used
+      id: test-wait-is-used
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test wait is used
+        setup-command: ''
+        command: grep wait main.c
+        input: ''
+        expected-output: wait(
+        comparison-method: contains
+        timeout: 1
+    - name: ensure debug has gdb used
+      id: ensure-debug-has-gdb-used
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: ensure debug has gdb used
+        setup-command: make debug
+        command: file uniform-length
+        input: ''
+        expected-output: with debug_info, not stripped
+        comparison-method: contains
+        timeout: 1
+        max-score: 1
+    - name: install scanelf
+      id: install-scanelf
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: install scanelf
+        setup-command: ''
+        command: sudo apt install pax-utils -y
+        timeout: 3
+    - name: test debug uses lazy
+      id: test-debug-uses-lazy
+      uses: education/autograding-io-grader@v1
+      with:
+        test-name: test debug uses lazy
+        setup-command: ''
+        command: scanelf uniform-length -a
+        input: ''
+        expected-output: LAZY
+        comparison-method: contains
+        timeout: 2
+    - name: Autograding Reporter
+      uses: education/autograding-grading-reporter@v1
+      env:
+        MAKE-ALL_RESULTS: "${{steps.make-all.outputs.result}}"
+        MAKE-UNIFORM-LENGTH_RESULTS: "${{steps.make-uniform-length.outputs.result}}"
+        MAKE-DEBUG_RESULTS: "${{steps.make-debug.outputs.result}}"
+        MAKE-CLEAN_RESULTS: "${{steps.make-clean.outputs.result}}"
+        STDIN-ONE-ONE-ONE_RESULTS: "${{steps.stdin-one-one-one.outputs.result}}"
+        STDIN-HELLO-THERE-ONE-ONE-ONE-ONE-TWO-ONE-THREE_RESULTS: "${{steps.stdin-hello-there-one-one-one-one-two-one-three.outputs.result}}"
+        STDIN-HELLO-THERE-WORLD-ANOTHER123-SEVERAL-659JUMPING-JURY-KYLLS-LOSING-MONEY-BONKERS_RESULTS: "${{steps.stdin-hello-there-world-another123-several-659jumping-jury-kylls-losing-money-bonkers.outputs.result}}"
+        ONE-INPUT-FILE-ONE-LINE-TEST-TXT_RESULTS: "${{steps.one-input-file-one-line-test-txt.outputs.result}}"
+        ONE-INPUT-FILE-TWO-LINE-TESTS-TXT_RESULTS: "${{steps.one-input-file-two-line-tests-txt.outputs.result}}"
+        ONE-INPUT-FILE-SIMPLE-TESTS-TXT_RESULTS: "${{steps.one-input-file-simple-tests-txt.outputs.result}}"
+        ONE-INPUT-FILE-PRIDE-SENTENCES-TXT_RESULTS: "${{steps.one-input-file-pride-sentences-txt.outputs.result}}"
+        TWO-INPUT-FILES-PRIDE-SENTENCES-TXT-PARADISE-LOST-TXT-206_RESULTS: "${{steps.two-input-files-pride-sentences-txt-paradise-lost-txt-206.outputs.result}}"
+        TWO-INPUT-FILES-PRIDE-SENTENCES-TXT-PARADISE-LOST-TXT-5695_RESULTS: "${{steps.two-input-files-pride-sentences-txt-paradise-lost-txt-5695.outputs.result}}"
+        TWO-INPUT-FILES-PRIDE-SENTENCES-TXT-PARADISE-LOST-TXT-58_RESULTS: "${{steps.two-input-files-pride-sentences-txt-paradise-lost-txt-58.outputs.result}}"
+        TWO-INPUT-FILES-PRIDE-SENTENCES-TXT-PARADISE-LOST-TXT-11070_RESULTS: "${{steps.two-input-files-pride-sentences-txt-paradise-lost-txt-11070.outputs.result}}"
+        TWO-INPUT-FILES-PRIDE-SENTENCES-TXT-PARADISE-LOST-TXT-COMPLETE_RESULTS: "${{steps.two-input-files-pride-sentences-txt-paradise-lost-txt-complete.outputs.result}}"
+        TWO-INPUT-FILES-TWO-LINE-TESTS-TXT-SIMPLE-TESTS-TXT-1_RESULTS: "${{steps.two-input-files-two-line-tests-txt-simple-tests-txt-1.outputs.result}}"
+        TWO-INPUT-FILES-TWO-LINE-TESTS-TXT-SIMPLE-TESTS-TXT-3_RESULTS: "${{steps.two-input-files-two-line-tests-txt-simple-tests-txt-3.outputs.result}}"
+        TWO-INPUT-FILES-TWO-LINE-TESTS-TXT-SIMPLE-TESTS-TXT-4_RESULTS: "${{steps.two-input-files-two-line-tests-txt-simple-tests-txt-4.outputs.result}}"
+        TWO-INPUT-FILES-TWO-LINE-TESTS-TXT-SIMPLE-TESTS-TXT-6_RESULTS: "${{steps.two-input-files-two-line-tests-txt-simple-tests-txt-6.outputs.result}}"
+        TWO-INPUT-FILES-TWO-LINE-TESTS-TXT-SIMPLE-TESTS-TXT-COMPLETE_RESULTS: "${{steps.two-input-files-two-line-tests-txt-simple-tests-txt-complete.outputs.result}}"
+        TWO-INPUT-FILES-TWO-LINE-TESTS-TXT-FILE-DOESNT-EXIST_RESULTS: "${{steps.two-input-files-two-line-tests-txt-file-doesnt-exist.outputs.result}}"
+        THREE-INPUT-FILES-PRIDE-SENTENCES-TXT-TWO-LINE-TESTS-TXT-SIMPLE-TESTS-TXT-4128_RESULTS: "${{steps.three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-4128.outputs.result}}"
+        THREE-INPUT-FILES-PRIDE-SENTENCES-TXT-TWO-LINE-TESTS-TXT-SIMPLE-TESTS-TXT-5695_RESULTS: "${{steps.three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-5695.outputs.result}}"
+        THREE-INPUT-FILES-PRIDE-SENTENCES-TXT-TWO-LINE-TESTS-TXT-SIMPLE-TESTS-TXT-1_RESULTS: "${{steps.three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-1.outputs.result}}"
+        THREE-INPUT-FILES-PRIDE-SENTENCES-TXT-TWO-LINE-TESTS-TXT-SIMPLE-TESTS-TXT-14_RESULTS: "${{steps.three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-14.outputs.result}}"
+        THREE-INPUT-FILES-PRIDE-SENTENCES-TXT-TWO-LINE-TESTS-TXT-SIMPLE-TESTS-TXT-COMPLETE_RESULTS: "${{steps.three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-complete.outputs.result}}"
+        FOUR-INPUT-FILES-PRIDE-SENTENCES-TXT-PARADISE-LOST-TXT-LEAVES-OF-GRASS-TXT-JEKYLL-HYDE-SENTENCES-TXT-4820_RESULTS: "${{steps.four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-4820.outputs.result}}"
+        FOUR-INPUT-FILES-PRIDE-SENTENCES-TXT-PARADISE-LOST-TXT-LEAVES-OF-GRASS-TXT-JEKYLL-HYDE-SENTENCES-TXT-7063_RESULTS: "${{steps.four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-7063.outputs.result}}"
+        FOUR-INPUT-FILES-PRIDE-SENTENCES-TXT-PARADISE-LOST-TXT-LEAVES-OF-GRASS-TXT-JEKYLL-HYDE-SENTENCES-TXT-5414_RESULTS: "${{steps.four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-5414.outputs.result}}"
+        FOUR-INPUT-FILES-PRIDE-SENTENCES-TXT-PARADISE-LOST-TXT-LEAVES-OF-GRASS-TXT-JEKYLL-HYDE-SENTENCES-TXT-1068_RESULTS: "${{steps.four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-1068.outputs.result}}"
+        FOUR-INPUT-FILES-PRIDE-SENTENCES-TXT-PARADISE-LOST-TXT-LEAVES-OF-GRASS-TXT-JEKYLL-HYDE-SENTENCES-TXT-COMPLETED_RESULTS: "${{steps.four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-completed.outputs.result}}"
+        STRACE-UNIFORM-LENGTH-FILE-EXISTS_RESULTS: "${{steps.strace-uniform-length-file-exists.outputs.result}}"
+        LTRACE-UNIFORM-LENGTH-SUMMARY-TABLE-FILE-EXISTS_RESULTS: "${{steps.ltrace-uniform-length-summary-table-file-exists.outputs.result}}"
+        ENSURE-FORK-IS-USED_RESULTS: "${{steps.ensure-fork-is-used.outputs.result}}"
+        TEST-WAIT-IS-USED_RESULTS: "${{steps.test-wait-is-used.outputs.result}}"
+        ENSURE-DEBUG-HAS-GDB-USED_RESULTS: "${{steps.ensure-debug-has-gdb-used.outputs.result}}"
+        INSTALL-SCANELF_RESULTS: "${{steps.install-scanelf.outputs.result}}"
+        TEST-DEBUG-USES-LAZY_RESULTS: "${{steps.test-debug-uses-lazy.outputs.result}}"
+      with:
+        runners: make-all,make-uniform-length,make-debug,make-clean,stdin-one-one-one,stdin-hello-there-one-one-one-one-two-one-three,stdin-hello-there-world-another123-several-659jumping-jury-kylls-losing-money-bonkers,one-input-file-one-line-test-txt,one-input-file-two-line-tests-txt,one-input-file-simple-tests-txt,one-input-file-pride-sentences-txt,two-input-files-pride-sentences-txt-paradise-lost-txt-206,two-input-files-pride-sentences-txt-paradise-lost-txt-5695,two-input-files-pride-sentences-txt-paradise-lost-txt-58,two-input-files-pride-sentences-txt-paradise-lost-txt-11070,two-input-files-pride-sentences-txt-paradise-lost-txt-complete,two-input-files-two-line-tests-txt-simple-tests-txt-1,two-input-files-two-line-tests-txt-simple-tests-txt-3,two-input-files-two-line-tests-txt-simple-tests-txt-4,two-input-files-two-line-tests-txt-simple-tests-txt-6,two-input-files-two-line-tests-txt-simple-tests-txt-complete,two-input-files-two-line-tests-txt-file-doesnt-exist,three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-4128,three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-5695,three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-1,three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-14,three-input-files-pride-sentences-txt-two-line-tests-txt-simple-tests-txt-complete,four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-4820,four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-7063,four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-5414,four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-1068,four-input-files-pride-sentences-txt-paradise-lost-txt-leaves-of-grass-txt-jekyll-hyde-sentences-txt-completed,strace-uniform-length-file-exists,ltrace-uniform-length-summary-table-file-exists,ensure-fork-is-used,test-wait-is-used,ensure-debug-has-gdb-used,install-scanelf,test-debug-uses-lazy
